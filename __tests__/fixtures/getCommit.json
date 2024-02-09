@@ -1,0 +1,103 @@
+{
+  "sha": "e4bde281e0d6820e61920c7eb4210d58cc9ae755",
+  "node_id": "C_kwDOLMyswtoAKGU0YmRlMjgxZTBkNjgyMGU2MTkyMGM3ZWI0MjEwZDU4Y2M5YWU3NTU",
+  "commit": {
+    "author": {
+      "name": "github-actions[bot]",
+      "email": "41898282+github-actions[bot]@users.noreply.github.com",
+      "date": "2024-02-08T14:57:36Z"
+    },
+    "committer": {
+      "name": "GitHub",
+      "email": "noreply@github.com",
+      "date": "2024-02-08T14:57:36Z"
+    },
+    "message": "Merge pull request #6 from ky1ejs/dependabot/npm_and_yarn/backend/graphql-codegen/cli-5.0.2\n\nBump @graphql-codegen/cli from 5.0.0 to 5.0.2 in /backend",
+    "tree": {
+      "sha": "be879ce5b66f05083d4e04aebac219ff0feca913",
+      "url": "https://api.github.com/repos/ky1ejs/cut/git/trees/be879ce5b66f05083d4e04aebac219ff0feca913"
+    },
+    "url": "https://api.github.com/repos/ky1ejs/cut/git/commits/e4bde281e0d6820e61920c7eb4210d58cc9ae755",
+    "comment_count": 0,
+    "verification": {
+      "verified": true,
+      "reason": "valid",
+      "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJlxOvgCRC1aQ7uu5UhlAAA19IQAC0txW70Iap537kwA+pfVTex\n67aV9SEQFWhEQaG4GIde22pMSPRwr+wCYwmau+5n+3dS68lXftNsToQ0Ht4jHx84\nq9rvJ6DiAfm3jTTKJ1V29hnRJn3UXT/lrHXXZNFSUscS1IpCoAgaq5WZAVdB2xP0\nZYlTjM1WjFYMa/r0EoFGUMhaqduuJBR0cIryDoGV1Qt4DAALFndOm7d/Uyhu/VTi\nMn+OJ83hm/kslVl9zF6JIycTWOnWq1VFtXqHt/4tJkP78Hpn9M98rzpEEFG7Yq6W\n+hyqrfxRlSgjCXa+QzuUw1imiUg6mhCwGumFpN3ePNJRAt8mw8xOM1Kj+VSGbJg+\n1zImpBFRwoIPP+YiiGiMrusk1hwGdM3sw7SzO5i5Rn9P8SOGFz5ztHchw2wE3q9W\nDptu1bYXqckWkAJ01ifaS1Xm9dtTnLnSCtl2Mjy9KcSPEfNyPMb/wUTfxmzZVpkX\n8rskkHs3Ethn7o0Njv5YjbqBvt499Qp6EwVwwbkrskNoWgJN0EbCKbs4EHVL8bBv\npJNv82HZG35G+YqVRJXWoOJ4F2iI7Y2eQujop7PlamCkHrSfJfyqM4qbm+pjS45n\npqGWbuut4ZStQUWHg9wUfZnpywLHi/MdzwhZYm5vbgjCVoYM+HlQT9Y41kUSWjJ5\n7o0fvRMRmk05B5i8YpnN\n=wOZn\n-----END PGP SIGNATURE-----\n",
+      "payload": "tree be879ce5b66f05083d4e04aebac219ff0feca913\nparent b481c741e192a04f7c4d092c862199bcc07bbd34\nparent f3fcbb3503950fdc4617df88cce43829b39e7f10\nauthor github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com> 1707404256 +0000\ncommitter GitHub <noreply@github.com> 1707404256 +0000\n\nMerge pull request #6 from ky1ejs/dependabot/npm_and_yarn/backend/graphql-codegen/cli-5.0.2\n\nBump @graphql-codegen/cli from 5.0.0 to 5.0.2 in /backend"
+    }
+  },
+  "url": "https://api.github.com/repos/ky1ejs/cut/commits/e4bde281e0d6820e61920c7eb4210d58cc9ae755",
+  "html_url": "https://github.com/ky1ejs/cut/commit/e4bde281e0d6820e61920c7eb4210d58cc9ae755",
+  "comments_url": "https://api.github.com/repos/ky1ejs/cut/commits/e4bde281e0d6820e61920c7eb4210d58cc9ae755/comments",
+  "author": {
+    "login": "github-actions[bot]",
+    "id": 41898282,
+    "node_id": "MDM6Qm90NDE4OTgyODI=",
+    "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+    "html_url": "https://github.com/apps/github-actions",
+    "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+    "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+    "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+    "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+    "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+    "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+    "type": "Bot",
+    "site_admin": false
+  },
+  "committer": {
+    "login": "web-flow",
+    "id": 19864447,
+    "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+    "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+    "gravatar_id": "",
+    "url": "https://api.github.com/users/web-flow",
+    "html_url": "https://github.com/web-flow",
+    "followers_url": "https://api.github.com/users/web-flow/followers",
+    "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+    "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+    "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+    "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+    "organizations_url": "https://api.github.com/users/web-flow/orgs",
+    "repos_url": "https://api.github.com/users/web-flow/repos",
+    "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+    "received_events_url": "https://api.github.com/users/web-flow/received_events",
+    "type": "User",
+    "site_admin": false
+  },
+  "parents": [
+    {
+      "sha": "b481c741e192a04f7c4d092c862199bcc07bbd34",
+      "url": "https://api.github.com/repos/ky1ejs/cut/commits/b481c741e192a04f7c4d092c862199bcc07bbd34",
+      "html_url": "https://github.com/ky1ejs/cut/commit/b481c741e192a04f7c4d092c862199bcc07bbd34"
+    },
+    {
+      "sha": "f3fcbb3503950fdc4617df88cce43829b39e7f10",
+      "url": "https://api.github.com/repos/ky1ejs/cut/commits/f3fcbb3503950fdc4617df88cce43829b39e7f10",
+      "html_url": "https://github.com/ky1ejs/cut/commit/f3fcbb3503950fdc4617df88cce43829b39e7f10"
+    }
+  ],
+  "stats": {
+    "total": 115,
+    "additions": 95,
+    "deletions": 20
+  },
+  "files": [
+    {
+      "sha": "76e6f32d81fb8484c5b22ee32fc676abc725b826",
+      "filename": "backend/pnpm-lock.yaml",
+      "status": "modified",
+      "additions": 95,
+      "deletions": 20,
+      "changes": 115,
+      "blob_url": "https://github.com/ky1ejs/cut/blob/e4bde281e0d6820e61920c7eb4210d58cc9ae755/backend%2Fpnpm-lock.yaml",
+      "raw_url": "https://github.com/ky1ejs/cut/raw/e4bde281e0d6820e61920c7eb4210d58cc9ae755/backend%2Fpnpm-lock.yaml",
+      "contents_url": "https://api.github.com/repos/ky1ejs/cut/contents/backend%2Fpnpm-lock.yaml?ref=e4bde281e0d6820e61920c7eb4210d58cc9ae755",
+      "patch": "@@ -30,7 +30,7 @@ dependencies:\n devDependencies:\n   '@graphql-codegen/cli':\n     specifier: ^5.0.0\n-    version: 5.0.0(@types/node@20.11.16)(graphql@16.8.1)(typescript@5.3.3)\n+    version: 5.0.2(@types/node@20.11.16)(graphql@16.8.1)(typescript@5.3.3)\n   '@graphql-codegen/typescript':\n     specifier: ^4.0.1\n     version: 4.0.4(graphql@16.8.1)\n@@ -846,8 +846,18 @@ packages:\n       '@jridgewell/trace-mapping': 0.3.9\n     dev: true\n \n-  /@graphql-codegen/cli@5.0.0(@types/node@20.11.16)(graphql@16.8.1)(typescript@5.3.3):\n-    resolution: {integrity: sha512-A7J7+be/a6e+/ul2KI5sfJlpoqeqwX8EzktaKCeduyVKgOLA6W5t+NUGf6QumBDXU8PEOqXk3o3F+RAwCWOiqA==}\n+  /@graphql-codegen/add@5.0.2(graphql@16.8.1):\n+    resolution: {integrity: sha512-ouBkSvMFUhda5VoKumo/ZvsZM9P5ZTyDsI8LW18VxSNWOjrTeLXBWHG8Gfaai0HwhflPtCYVABbriEcOmrRShQ==}\n+    peerDependencies:\n+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n+    dependencies:\n+      '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n+      graphql: 16.8.1\n+      tslib: 2.6.2\n+    dev: true\n+\n+  /@graphql-codegen/cli@5.0.2(@types/node@20.11.16)(graphql@16.8.1)(typescript@5.3.3):\n+    resolution: {integrity: sha512-MBIaFqDiLKuO4ojN6xxG9/xL9wmfD3ZjZ7RsPjwQnSHBCUXnEkdKvX+JVpx87Pq29Ycn8wTJUguXnTZ7Di0Mlw==}\n     hasBin: true\n     peerDependencies:\n       '@parcel/watcher': ^2.1.0\n@@ -859,8 +869,9 @@ packages:\n       '@babel/generator': 7.23.6\n       '@babel/template': 7.23.9\n       '@babel/types': 7.23.9\n-      '@graphql-codegen/core': 4.0.0(graphql@16.8.1)\n-      '@graphql-codegen/plugin-helpers': 5.0.1(graphql@16.8.1)\n+      '@graphql-codegen/client-preset': 4.2.2(graphql@16.8.1)\n+      '@graphql-codegen/core': 4.0.2(graphql@16.8.1)\n+      '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n       '@graphql-tools/apollo-engine-loader': 8.0.0(graphql@16.8.1)\n       '@graphql-tools/code-file-loader': 8.1.0(graphql@16.8.1)\n       '@graphql-tools/git-loader': 8.0.4(graphql@16.8.1)\n@@ -902,30 +913,56 @@ packages:\n       - utf-8-validate\n     dev: true\n \n-  /@graphql-codegen/core@4.0.0(graphql@16.8.1):\n-    resolution: {integrity: sha512-JAGRn49lEtSsZVxeIlFVIRxts2lWObR+OQo7V2LHDJ7ohYYw3ilv7nJ8pf8P4GTg/w6ptcYdSdVVdkI8kUHB/Q==}\n+  /@graphql-codegen/client-preset@4.2.2(graphql@16.8.1):\n+    resolution: {integrity: sha512-DF9pNWj3TEdA90E9FH5SsUIqiZfr872vqaQOspLVuVXGsaDx8F/JLLzaN+7ucmoo0ff/bLW8munVXYXTmgwwEA==}\n+    peerDependencies:\n+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n+    dependencies:\n+      '@babel/helper-plugin-utils': 7.22.5\n+      '@babel/template': 7.23.9\n+      '@graphql-codegen/add': 5.0.2(graphql@16.8.1)\n+      '@graphql-codegen/gql-tag-operations': 4.0.4(graphql@16.8.1)\n+      '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n+      '@graphql-codegen/typed-document-node': 5.0.4(graphql@16.8.1)\n+      '@graphql-codegen/typescript': 4.0.4(graphql@16.8.1)\n+      '@graphql-codegen/typescript-operations': 4.1.2(graphql@16.8.1)\n+      '@graphql-codegen/visitor-plugin-common': 4.1.2(graphql@16.8.1)\n+      '@graphql-tools/documents': 1.0.0(graphql@16.8.1)\n+      '@graphql-tools/utils': 10.0.13(graphql@16.8.1)\n+      '@graphql-typed-document-node/core': 3.2.0(graphql@16.8.1)\n+      graphql: 16.8.1\n+      tslib: 2.6.2\n+    transitivePeerDependencies:\n+      - encoding\n+      - supports-color\n+    dev: true\n+\n+  /@graphql-codegen/core@4.0.2(graphql@16.8.1):\n+    resolution: {integrity: sha512-IZbpkhwVqgizcjNiaVzNAzm/xbWT6YnGgeOLwVjm4KbJn3V2jchVtuzHH09G5/WkkLSk2wgbXNdwjM41JxO6Eg==}\n     peerDependencies:\n       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n     dependencies:\n       '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n       '@graphql-tools/schema': 10.0.2(graphql@16.8.1)\n       '@graphql-tools/utils': 10.0.13(graphql@16.8.1)\n       graphql: 16.8.1\n-      tslib: 2.5.3\n+      tslib: 2.6.2\n     dev: true\n \n-  /@graphql-codegen/plugin-helpers@5.0.1(graphql@16.8.1):\n-    resolution: {integrity: sha512-6L5sb9D8wptZhnhLLBcheSPU7Tg//DGWgc5tQBWX46KYTOTQHGqDpv50FxAJJOyFVJrveN9otWk9UT9/yfY4ww==}\n+  /@graphql-codegen/gql-tag-operations@4.0.4(graphql@16.8.1):\n+    resolution: {integrity: sha512-dypul0iDLjb07yv+/cRb6qPbn42cFPcwlsJertVl9G6qkS4+3V4806WwSfUht4QVMWnvGfgDkJJqG0yUVKOHwA==}\n     peerDependencies:\n       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n     dependencies:\n+      '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n+      '@graphql-codegen/visitor-plugin-common': 4.1.2(graphql@16.8.1)\n       '@graphql-tools/utils': 10.0.13(graphql@16.8.1)\n-      change-case-all: 1.0.15\n-      common-tags: 1.8.2\n+      auto-bind: 4.0.0\n       graphql: 16.8.1\n-      import-from: 4.0.0\n-      lodash: 4.17.21\n-      tslib: 2.5.3\n+      tslib: 2.6.2\n+    transitivePeerDependencies:\n+      - encoding\n+      - supports-color\n     dev: true\n \n   /@graphql-codegen/plugin-helpers@5.0.3(graphql@16.8.1):\n@@ -953,6 +990,38 @@ packages:\n       tslib: 2.6.2\n     dev: true\n \n+  /@graphql-codegen/typed-document-node@5.0.4(graphql@16.8.1):\n+    resolution: {integrity: sha512-t66Z6erQ4Dh1j6f9pRZmc8uYtHoUI3A49tLmJAlg9/3IV0kCmwrWKJut/G8SeOefDLG8cXBTVtI/YuZOe1Te+w==}\n+    peerDependencies:\n+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n+    dependencies:\n+      '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n+      '@graphql-codegen/visitor-plugin-common': 4.1.2(graphql@16.8.1)\n+      auto-bind: 4.0.0\n+      change-case-all: 1.0.15\n+      graphql: 16.8.1\n+      tslib: 2.6.2\n+    transitivePeerDependencies:\n+      - encoding\n+      - supports-color\n+    dev: true\n+\n+  /@graphql-codegen/typescript-operations@4.1.2(graphql@16.8.1):\n+    resolution: {integrity: sha512-CtCWK+gW7hS+Ely3lohr8CL1HVLswQzMcaUk3k1sxdWCWKTNq7abMsWa31rTVwRCJ+WNEkM/7S8sIBTpEG683A==}\n+    peerDependencies:\n+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n+    dependencies:\n+      '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n+      '@graphql-codegen/typescript': 4.0.4(graphql@16.8.1)\n+      '@graphql-codegen/visitor-plugin-common': 4.1.2(graphql@16.8.1)\n+      auto-bind: 4.0.0\n+      graphql: 16.8.1\n+      tslib: 2.6.2\n+    transitivePeerDependencies:\n+      - encoding\n+      - supports-color\n+    dev: true\n+\n   /@graphql-codegen/typescript-resolvers@4.0.4(graphql@16.8.1):\n     resolution: {integrity: sha512-o1FEbvoTgF32n2YL8dJmtRYlIjKy16hyQz+co5Mj9yR9c1CtWrvjnlB7WeTAVJRhasqYloXXfLXb+efhMkUl9A==}\n     peerDependencies:\n@@ -1066,6 +1135,17 @@ packages:\n       tslib: 2.6.2\n     dev: true\n \n+  /@graphql-tools/documents@1.0.0(graphql@16.8.1):\n+    resolution: {integrity: sha512-rHGjX1vg/nZ2DKqRGfDPNC55CWZBMldEVcH+91BThRa6JeT80NqXknffLLEZLRUxyikCfkwMsk6xR3UNMqG0Rg==}\n+    engines: {node: '>=16.0.0'}\n+    peerDependencies:\n+      graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0\n+    dependencies:\n+      graphql: 16.8.1\n+      lodash.sortby: 4.7.0\n+      tslib: 2.6.2\n+    dev: true\n+\n   /@graphql-tools/executor-graphql-ws@1.1.0(graphql@16.8.1):\n     resolution: {integrity: sha512-yM67SzwE8rYRpm4z4AuGtABlOp9mXXVy6sxXnTJRoYIdZrmDbKVfIY+CpZUJCqS0FX3xf2+GoHlsj7Qswaxgcg==}\n     engines: {node: '>=16.0.0'}\n@@ -3025,7 +3105,6 @@ packages:\n \n   /lodash.sortby@4.7.0:\n     resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}\n-    dev: false\n \n   /lodash@4.17.21:\n     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}\n@@ -3843,10 +3922,6 @@ packages:\n       yn: 3.1.1\n     dev: true\n \n-  /tslib@2.5.3:\n-    resolution: {integrity: sha512-mSxlJJwl3BMEQCUNnxXBU9jP4JBktcEGhURcPR6VQVlnP0FdDEsIaz0C35dXNGLyRfrATNofF0F5p2KPxQgB+w==}\n-    dev: true\n-\n   /tslib@2.6.2:\n     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}\n "
+    }
+  ]
+}

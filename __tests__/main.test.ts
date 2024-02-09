@@ -1,24 +1,38 @@
-/**
- * Unit tests for the action's main functionality, src/main.ts
- *
- * These should be run as if the action was called from a workflow.
- * Specifically, the inputs listed in `action.yml` should be set as environment
- * variables following the pattern `INPUT_<INPUT_NAME>`.
- */
-
 import * as core from '@actions/core'
 import * as main from '../src/main'
+import fs from 'fs'
 
-// Mock the action's main function
+const octokit = {
+  rest: {
+    repos: {
+      getCommit: jest.fn(),
+      getLatestRelease: jest.fn(),
+      compareCommits: jest.fn(),
+      listPullRequestsAssociatedWithCommit: jest.fn()
+    }
+  }
+}
+
+jest.mock('@octokit/rest', () => {
+  return {
+    Octokit: jest.fn(() => octokit)
+  }
+})
+
+// mock the GitHub context
+jest.mock('@actions/github', () => {
+  return {
+    context: {
+      repo: {
+        owner: 'some-owner',
+        repo: 'some-repo'
+      }
+    }
+  }
+})
+
 const runMock = jest.spyOn(main, 'run')
-
-// Other utilities
-const timeRegex = /^\d{2}:\d{2}:\d{2}/
-
-// Mock the GitHub Actions core library
-let debugMock: jest.SpyInstance
 let errorMock: jest.SpyInstance
-let getInputMock: jest.SpyInstance
 let setFailedMock: jest.SpyInstance
 let setOutputMock: jest.SpyInstance
 
@@ -26,64 +40,63 @@ describe('action', () => {
   beforeEach(() => {
     jest.clearAllMocks()
 
-    debugMock = jest.spyOn(core, 'debug').mockImplementation()
+    jest.spyOn(octokit.rest.repos, 'getCommit').mockImplementation(async () => {
+      const jsonFile = fs.readFileSync(
+        `${__dirname}/fixtures/getCommit.json`,
+        'utf-8'
+      )
+      const getCommitData = JSON.parse(jsonFile)
+      return Promise.resolve({ data: getCommitData })
+    })
+
+    jest
+      .spyOn(octokit.rest.repos, 'getLatestRelease')
+      .mockImplementation(async () => {
+        const jsonFile = fs.readFileSync(
+          `${__dirname}/fixtures/getLatestRelease.json`,
+          'utf-8'
+        )
+        const getLatestReleaseData = JSON.parse(jsonFile)
+        return Promise.resolve({ data: getLatestReleaseData })
+      })
+
+    jest
+      .spyOn(octokit.rest.repos, 'compareCommits')
+      .mockImplementation(async () => {
+        const jsonFile = fs.readFileSync(
+          `${__dirname}/fixtures/compareCommits.json`,
+          'utf-8'
+        )
+        const compareCommitsData = JSON.parse(jsonFile)
+        return Promise.resolve({ data: compareCommitsData })
+      })
+
+    jest
+      .spyOn(octokit.rest.repos, 'listPullRequestsAssociatedWithCommit')
+      .mockImplementation(async () => {
+        const jsonFile = fs.readFileSync(
+          `${__dirname}/fixtures/listPullRequestsAssociatedWithCommit.json`,
+          'utf-8'
+        )
+        const listPullRequestsAssociatedWithCommitData = JSON.parse(jsonFile)
+        return Promise.resolve({
+          data: listPullRequestsAssociatedWithCommitData
+        })
+      })
+
     errorMock = jest.spyOn(core, 'error').mockImplementation()
-    getInputMock = jest.spyOn(core, 'getInput').mockImplementation()
     setFailedMock = jest.spyOn(core, 'setFailed').mockImplementation()
     setOutputMock = jest.spyOn(core, 'setOutput').mockImplementation()
   })
 
   it('sets the time output', async () => {
-    // Set the action's inputs as return values from core.getInput()
-    getInputMock.mockImplementation((name: string): string => {
-      switch (name) {
-        case 'milliseconds':
-          return '500'
-        default:
-          return ''
-      }
-    })
-
     await main.run()
     expect(runMock).toHaveReturned()
-
-    // Verify that all of the core library functions were called correctly
-    expect(debugMock).toHaveBeenNthCalledWith(1, 'Waiting 500 milliseconds ...')
-    expect(debugMock).toHaveBeenNthCalledWith(
-      2,
-      expect.stringMatching(timeRegex)
-    )
-    expect(debugMock).toHaveBeenNthCalledWith(
-      3,
-      expect.stringMatching(timeRegex)
-    )
-    expect(setOutputMock).toHaveBeenNthCalledWith(
-      1,
-      'time',
-      expect.stringMatching(timeRegex)
+    expect(setOutputMock).toHaveBeenCalledWith(
+      'release-notes',
+      expect.any(String)
     )
     expect(errorMock).not.toHaveBeenCalled()
-  })
-
-  it('sets a failed status', async () => {
-    // Set the action's inputs as return values from core.getInput()
-    getInputMock.mockImplementation((name: string): string => {
-      switch (name) {
-        case 'milliseconds':
-          return 'this is not a number'
-        default:
-          return ''
-      }
-    })
-
-    await main.run()
-    expect(runMock).toHaveReturned()
-
-    // Verify that all of the core library functions were called correctly
-    expect(setFailedMock).toHaveBeenNthCalledWith(
-      1,
-      'milliseconds not a number'
-    )
-    expect(errorMock).not.toHaveBeenCalled()
+    expect(setFailedMock).not.toHaveBeenCalled()
   })
 })

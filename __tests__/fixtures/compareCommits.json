@@ -1,0 +1,521 @@
+{
+  "url": "https://api.github.com/repos/ky1ejs/cut/compare/6093f3b7ad6330989addeebcc765e0aefaa79e18...e4bde281e0d6820e61920c7eb4210d58cc9ae755",
+  "html_url": "https://github.com/ky1ejs/cut/compare/6093f3b7ad6330989addeebcc765e0aefaa79e18...e4bde281e0d6820e61920c7eb4210d58cc9ae755",
+  "permalink_url": "https://github.com/ky1ejs/cut/compare/ky1ejs:6093f3b...ky1ejs:e4bde28",
+  "diff_url": "https://github.com/ky1ejs/cut/compare/6093f3b7ad6330989addeebcc765e0aefaa79e18...e4bde281e0d6820e61920c7eb4210d58cc9ae755.diff",
+  "patch_url": "https://github.com/ky1ejs/cut/compare/6093f3b7ad6330989addeebcc765e0aefaa79e18...e4bde281e0d6820e61920c7eb4210d58cc9ae755.patch",
+  "base_commit": {
+    "sha": "6093f3b7ad6330989addeebcc765e0aefaa79e18",
+    "node_id": "C_kwDOLMyswtoAKDYwOTNmM2I3YWQ2MzMwOTg5YWRkZWViY2M3NjVlMGFlZmFhNzllMTg",
+    "commit": {
+      "author": {
+        "name": "github-actions[bot]",
+        "email": "41898282+github-actions[bot]@users.noreply.github.com",
+        "date": "2024-02-08T13:57:14Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2024-02-08T13:57:14Z"
+      },
+      "message": "Merge pull request #9 from ky1ejs/dependabot/npm_and_yarn/web/postcss-8.4.35\n\nBump postcss from 8.4.34 to 8.4.35 in /web",
+      "tree": {
+        "sha": "a5934b7fa4cb1cffcbbf35a54a460837419c3840",
+        "url": "https://api.github.com/repos/ky1ejs/cut/git/trees/a5934b7fa4cb1cffcbbf35a54a460837419c3840"
+      },
+      "url": "https://api.github.com/repos/ky1ejs/cut/git/commits/6093f3b7ad6330989addeebcc765e0aefaa79e18",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJlxN26CRC1aQ7uu5UhlAAAIGoQADZpAJ1GwFGt1IrWovTE8g2H\nDcwI4UP+5Qe1bFQ2gzEKoKiacJBNf8+eGjPw3SwhlkF/ymmvFm6HRRzzwJVXHSVS\n1rF6vButAfLOV+hQD7a6oIX+9OmohIUhPxCvFRBrddUaLBiy+224SxPhkqz+ZPna\nMqOVpHt6zzrW0LdP65yQbT3931yEDyOGZHLKrUUonvPibaoKfuFOWBxTeWlo05QI\nXfhi+L6iIpUKE7WNs0zd3HYnlb0NMsu9WVO0C0ZxMK35pXo/ldZbAp3usZ3VZ94T\nm+zFj1eDEqUC+dqRE9Amfnet6L8j1rPQdttFLZUuO5sotlHpKxSxbPCua+URaNfz\nUHUXxNhp5eZMsEolcLwj13UaLZScGSLkcK8Du6ATMQg39PeBI1GDCurSucECclou\n/piNyxIMrcD3U6g4oTzG6Sk4yI4Y+M4FSzozBka6L4ux3NFkpcH3HTkClJTBTKs4\nQJ+qggyAmGfF7jFWoFW3WWueXsVp0cyc9nDAVbPKfhGBYMdGWHxamk4nY7OlUKRA\nVTPmHV2pAGkvZ4d/xITcHBmR9PjSfZYYGZls5rQppBnJ70kliKfCrr+TXGoEiMvy\nK/ItRNR9q8uojc7IuG038m5Rq3RsDTto69lnaKPUkAmQDv+ywW4mi8QOi4AmMOKM\nEuJpDqPzAGPilZ5+sMfq\n=DgRg\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree a5934b7fa4cb1cffcbbf35a54a460837419c3840\nparent 4d33f8002867280de687f5b30d45639fb8833ed2\nparent 5f14f9bf687ed24feb9c802a84ec2dd4f261e76f\nauthor github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com> 1707400634 +0000\ncommitter GitHub <noreply@github.com> 1707400634 +0000\n\nMerge pull request #9 from ky1ejs/dependabot/npm_and_yarn/web/postcss-8.4.35\n\nBump postcss from 8.4.34 to 8.4.35 in /web"
+      }
+    },
+    "url": "https://api.github.com/repos/ky1ejs/cut/commits/6093f3b7ad6330989addeebcc765e0aefaa79e18",
+    "html_url": "https://github.com/ky1ejs/cut/commit/6093f3b7ad6330989addeebcc765e0aefaa79e18",
+    "comments_url": "https://api.github.com/repos/ky1ejs/cut/commits/6093f3b7ad6330989addeebcc765e0aefaa79e18/comments",
+    "author": {
+      "login": "github-actions[bot]",
+      "id": 41898282,
+      "node_id": "MDM6Qm90NDE4OTgyODI=",
+      "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+      "html_url": "https://github.com/apps/github-actions",
+      "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+      "type": "Bot",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "4d33f8002867280de687f5b30d45639fb8833ed2",
+        "url": "https://api.github.com/repos/ky1ejs/cut/commits/4d33f8002867280de687f5b30d45639fb8833ed2",
+        "html_url": "https://github.com/ky1ejs/cut/commit/4d33f8002867280de687f5b30d45639fb8833ed2"
+      },
+      {
+        "sha": "5f14f9bf687ed24feb9c802a84ec2dd4f261e76f",
+        "url": "https://api.github.com/repos/ky1ejs/cut/commits/5f14f9bf687ed24feb9c802a84ec2dd4f261e76f",
+        "html_url": "https://github.com/ky1ejs/cut/commit/5f14f9bf687ed24feb9c802a84ec2dd4f261e76f"
+      }
+    ]
+  },
+  "merge_base_commit": {
+    "sha": "6093f3b7ad6330989addeebcc765e0aefaa79e18",
+    "node_id": "C_kwDOLMyswtoAKDYwOTNmM2I3YWQ2MzMwOTg5YWRkZWViY2M3NjVlMGFlZmFhNzllMTg",
+    "commit": {
+      "author": {
+        "name": "github-actions[bot]",
+        "email": "41898282+github-actions[bot]@users.noreply.github.com",
+        "date": "2024-02-08T13:57:14Z"
+      },
+      "committer": {
+        "name": "GitHub",
+        "email": "noreply@github.com",
+        "date": "2024-02-08T13:57:14Z"
+      },
+      "message": "Merge pull request #9 from ky1ejs/dependabot/npm_and_yarn/web/postcss-8.4.35\n\nBump postcss from 8.4.34 to 8.4.35 in /web",
+      "tree": {
+        "sha": "a5934b7fa4cb1cffcbbf35a54a460837419c3840",
+        "url": "https://api.github.com/repos/ky1ejs/cut/git/trees/a5934b7fa4cb1cffcbbf35a54a460837419c3840"
+      },
+      "url": "https://api.github.com/repos/ky1ejs/cut/git/commits/6093f3b7ad6330989addeebcc765e0aefaa79e18",
+      "comment_count": 0,
+      "verification": {
+        "verified": true,
+        "reason": "valid",
+        "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJlxN26CRC1aQ7uu5UhlAAAIGoQADZpAJ1GwFGt1IrWovTE8g2H\nDcwI4UP+5Qe1bFQ2gzEKoKiacJBNf8+eGjPw3SwhlkF/ymmvFm6HRRzzwJVXHSVS\n1rF6vButAfLOV+hQD7a6oIX+9OmohIUhPxCvFRBrddUaLBiy+224SxPhkqz+ZPna\nMqOVpHt6zzrW0LdP65yQbT3931yEDyOGZHLKrUUonvPibaoKfuFOWBxTeWlo05QI\nXfhi+L6iIpUKE7WNs0zd3HYnlb0NMsu9WVO0C0ZxMK35pXo/ldZbAp3usZ3VZ94T\nm+zFj1eDEqUC+dqRE9Amfnet6L8j1rPQdttFLZUuO5sotlHpKxSxbPCua+URaNfz\nUHUXxNhp5eZMsEolcLwj13UaLZScGSLkcK8Du6ATMQg39PeBI1GDCurSucECclou\n/piNyxIMrcD3U6g4oTzG6Sk4yI4Y+M4FSzozBka6L4ux3NFkpcH3HTkClJTBTKs4\nQJ+qggyAmGfF7jFWoFW3WWueXsVp0cyc9nDAVbPKfhGBYMdGWHxamk4nY7OlUKRA\nVTPmHV2pAGkvZ4d/xITcHBmR9PjSfZYYGZls5rQppBnJ70kliKfCrr+TXGoEiMvy\nK/ItRNR9q8uojc7IuG038m5Rq3RsDTto69lnaKPUkAmQDv+ywW4mi8QOi4AmMOKM\nEuJpDqPzAGPilZ5+sMfq\n=DgRg\n-----END PGP SIGNATURE-----\n",
+        "payload": "tree a5934b7fa4cb1cffcbbf35a54a460837419c3840\nparent 4d33f8002867280de687f5b30d45639fb8833ed2\nparent 5f14f9bf687ed24feb9c802a84ec2dd4f261e76f\nauthor github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com> 1707400634 +0000\ncommitter GitHub <noreply@github.com> 1707400634 +0000\n\nMerge pull request #9 from ky1ejs/dependabot/npm_and_yarn/web/postcss-8.4.35\n\nBump postcss from 8.4.34 to 8.4.35 in /web"
+      }
+    },
+    "url": "https://api.github.com/repos/ky1ejs/cut/commits/6093f3b7ad6330989addeebcc765e0aefaa79e18",
+    "html_url": "https://github.com/ky1ejs/cut/commit/6093f3b7ad6330989addeebcc765e0aefaa79e18",
+    "comments_url": "https://api.github.com/repos/ky1ejs/cut/commits/6093f3b7ad6330989addeebcc765e0aefaa79e18/comments",
+    "author": {
+      "login": "github-actions[bot]",
+      "id": 41898282,
+      "node_id": "MDM6Qm90NDE4OTgyODI=",
+      "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+      "html_url": "https://github.com/apps/github-actions",
+      "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+      "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+      "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+      "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+      "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+      "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+      "type": "Bot",
+      "site_admin": false
+    },
+    "committer": {
+      "login": "web-flow",
+      "id": 19864447,
+      "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/web-flow",
+      "html_url": "https://github.com/web-flow",
+      "followers_url": "https://api.github.com/users/web-flow/followers",
+      "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+      "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+      "organizations_url": "https://api.github.com/users/web-flow/orgs",
+      "repos_url": "https://api.github.com/users/web-flow/repos",
+      "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/web-flow/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "parents": [
+      {
+        "sha": "4d33f8002867280de687f5b30d45639fb8833ed2",
+        "url": "https://api.github.com/repos/ky1ejs/cut/commits/4d33f8002867280de687f5b30d45639fb8833ed2",
+        "html_url": "https://github.com/ky1ejs/cut/commit/4d33f8002867280de687f5b30d45639fb8833ed2"
+      },
+      {
+        "sha": "5f14f9bf687ed24feb9c802a84ec2dd4f261e76f",
+        "url": "https://api.github.com/repos/ky1ejs/cut/commits/5f14f9bf687ed24feb9c802a84ec2dd4f261e76f",
+        "html_url": "https://github.com/ky1ejs/cut/commit/5f14f9bf687ed24feb9c802a84ec2dd4f261e76f"
+      }
+    ]
+  },
+  "status": "ahead",
+  "ahead_by": 4,
+  "behind_by": 0,
+  "total_commits": 4,
+  "commits": [
+    {
+      "sha": "3e55c2c2fa130752101dc0eecbaa03b539fc04dc",
+      "node_id": "C_kwDOLMyswtoAKDNlNTVjMmMyZmExMzA3NTIxMDFkYzBlZWNiYWEwM2I1MzlmYzA0ZGM",
+      "commit": {
+        "author": {
+          "name": "dependabot[bot]",
+          "email": "49699333+dependabot[bot]@users.noreply.github.com",
+          "date": "2024-02-08T14:55:42Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2024-02-08T14:55:42Z"
+        },
+        "message": "Bump @graphql-codegen/typescript from 4.0.1 to 4.0.4 in /backend\n\nBumps [@graphql-codegen/typescript](https://github.com/dotansimha/graphql-code-generator/tree/HEAD/packages/plugins/typescript/typescript) from 4.0.1 to 4.0.4.\n- [Release notes](https://github.com/dotansimha/graphql-code-generator/releases)\n- [Changelog](https://github.com/dotansimha/graphql-code-generator/blob/master/packages/plugins/typescript/typescript/CHANGELOG.md)\n- [Commits](https://github.com/dotansimha/graphql-code-generator/commits/@graphql-codegen/typescript@4.0.4/packages/plugins/typescript/typescript)\n\n---\nupdated-dependencies:\n- dependency-name: \"@graphql-codegen/typescript\"\n  dependency-type: direct:development\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>",
+        "tree": {
+          "sha": "bf476677549f3fdd49b40b0098754c698d07cd27",
+          "url": "https://api.github.com/repos/ky1ejs/cut/git/trees/bf476677549f3fdd49b40b0098754c698d07cd27"
+        },
+        "url": "https://api.github.com/repos/ky1ejs/cut/git/commits/3e55c2c2fa130752101dc0eecbaa03b539fc04dc",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJlxOtuCRC1aQ7uu5UhlAAAMzQQAItfcncWmol5gCB0eXBhbASX\n7wC8BNaIN0/98LWaq0ZRvcLESwhnYwyEi+iW/8g1605uwDtKmxAfj/5FkYzCZqMh\nbFvx2IXcufDSv9ePm/YhlkRw73zGUdHgARdH44UAX+uaI+FS7dJO2OPnOutUcbUj\nLE6ClXfMMqtIrBLCOCb3rR750qlYxoq6e1VXOEqfEXeXzQZuFN9HVx3REuuGDfN4\na2X07ft2i1zmjzj+upuUtfkbfLKV8NqL75iXI69G6nRk/o/t3uNkAElWctWkzr85\nYw0VzD+4IOdFssznBl8jqhVRrXG4sGm5NL/WXOrIaL+XeXuwFsfdKsZObe3wHWes\nKqvBj/tAumfj9dY0ibmpO1RkopbMqiqsB0GmuHDdNyD0XVy7hSoX08jRwy6RHCXw\nUzD/YcJaXyDCUly129AldstmujI1y45jI/fHR9s2fE5CCT2VUUcb+ChqUSTKMkaz\nH7WgthOWlGAXfiPQOM6zDgnj69aRxZySoimzj+VQS0eAEyO/GwOMgS9nmcvgHlUH\nyWbAGjb8/EyBR49E9f6SMNssCi0Q9brLm0LbjhE6qet314Izx+F0tiyWjrQjWnaf\nBQT3wG5vYBenQCHySxx3IEShrXgUzEg8rOEbSsrLPGbr4EhepwFzTDoGZwYyJTDL\n7zux+Ygo2tuqaN0/OUf4\n=L7rY\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree bf476677549f3fdd49b40b0098754c698d07cd27\nparent 6093f3b7ad6330989addeebcc765e0aefaa79e18\nauthor dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com> 1707404142 +0000\ncommitter GitHub <noreply@github.com> 1707404142 +0000\n\nBump @graphql-codegen/typescript from 4.0.1 to 4.0.4 in /backend\n\nBumps [@graphql-codegen/typescript](https://github.com/dotansimha/graphql-code-generator/tree/HEAD/packages/plugins/typescript/typescript) from 4.0.1 to 4.0.4.\n- [Release notes](https://github.com/dotansimha/graphql-code-generator/releases)\n- [Changelog](https://github.com/dotansimha/graphql-code-generator/blob/master/packages/plugins/typescript/typescript/CHANGELOG.md)\n- [Commits](https://github.com/dotansimha/graphql-code-generator/commits/@graphql-codegen/typescript@4.0.4/packages/plugins/typescript/typescript)\n\n---\nupdated-dependencies:\n- dependency-name: \"@graphql-codegen/typescript\"\n  dependency-type: direct:development\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>"
+        }
+      },
+      "url": "https://api.github.com/repos/ky1ejs/cut/commits/3e55c2c2fa130752101dc0eecbaa03b539fc04dc",
+      "html_url": "https://github.com/ky1ejs/cut/commit/3e55c2c2fa130752101dc0eecbaa03b539fc04dc",
+      "comments_url": "https://api.github.com/repos/ky1ejs/cut/commits/3e55c2c2fa130752101dc0eecbaa03b539fc04dc/comments",
+      "author": {
+        "login": "dependabot[bot]",
+        "id": 49699333,
+        "node_id": "MDM6Qm90NDk2OTkzMzM=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/29110?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dependabot%5Bbot%5D",
+        "html_url": "https://github.com/apps/dependabot",
+        "followers_url": "https://api.github.com/users/dependabot%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/dependabot%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dependabot%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dependabot%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dependabot%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/dependabot%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/dependabot%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/dependabot%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dependabot%5Bbot%5D/received_events",
+        "type": "Bot",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "6093f3b7ad6330989addeebcc765e0aefaa79e18",
+          "url": "https://api.github.com/repos/ky1ejs/cut/commits/6093f3b7ad6330989addeebcc765e0aefaa79e18",
+          "html_url": "https://github.com/ky1ejs/cut/commit/6093f3b7ad6330989addeebcc765e0aefaa79e18"
+        }
+      ]
+    },
+    {
+      "sha": "b481c741e192a04f7c4d092c862199bcc07bbd34",
+      "node_id": "C_kwDOLMyswtoAKGI0ODFjNzQxZTE5MmEwNGY3YzRkMDkyYzg2MjE5OWJjYzA3YmJkMzQ",
+      "commit": {
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "41898282+github-actions[bot]@users.noreply.github.com",
+          "date": "2024-02-08T14:56:01Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2024-02-08T14:56:01Z"
+        },
+        "message": "Merge pull request #7 from ky1ejs/dependabot/npm_and_yarn/backend/graphql-codegen/typescript-4.0.4\n\nBump @graphql-codegen/typescript from 4.0.1 to 4.0.4 in /backend",
+        "tree": {
+          "sha": "bf476677549f3fdd49b40b0098754c698d07cd27",
+          "url": "https://api.github.com/repos/ky1ejs/cut/git/trees/bf476677549f3fdd49b40b0098754c698d07cd27"
+        },
+        "url": "https://api.github.com/repos/ky1ejs/cut/git/commits/b481c741e192a04f7c4d092c862199bcc07bbd34",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJlxOuBCRC1aQ7uu5UhlAAAtQkQAA9t+dJxGOdnU/r+f/gd75bi\nmrC63eWnzxfVjG13age4PF74N9PWYNrwAKKLeL1+ZWr4pMTbnkw1vGJ7Au0RMpd1\nMaTARzoOPhmm5hyvfdfV2JVGd+gswk8EEUVc5mejyInoHqqgfftBUc3ZIVAqFOIY\nhiFwh/hRvfRpWXIux4Y1qJrXpATEIEpuFS73Fo5Gr1rqPO9lINnH0kTH0jd06zn5\n0IFSpUB+x0ml3IVB5l86RDVbwpAYShdj8wTmicKs3L0/WSG5h2kiXPXgJYKLSmVE\n2Rf5HqnnqxsjfaZ2jlV3VNT6s5IqTg+booZZZ/l9VKzVqpd2VLbXQneRfNEv1RAy\n0tsNSmT3yqC/Ov3Y/IoR/JAUCHAS6BaH1vmrktjkr2qfYP0NoxZZE1Plk9vGVkZH\nhOeI8xrBgamih+dMDv07bAqo5qa6nSyHrvc18IVylmV4ru4uKVvFMc9yCI6BEqps\nxT0xZie+QqDEt25pUw+8o2xCtY9OBG+XXCSdg8ADKWB8mSNbMH8L9Z2QkdrXUvEN\nmlQrKkBdEvostgIy0BfJ7NukxOWdbOeXEH2u/33niKCwXT0h9atTy0o4zu5NQTkL\nNgzufsJDtwws4JUvNBp8ufDisAllGelqkynxLIFkr/VkH4zWZKUyBz+sWq/PkzC2\nxlSV9fRYJANFJvaoywyE\n=R6v1\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree bf476677549f3fdd49b40b0098754c698d07cd27\nparent 6093f3b7ad6330989addeebcc765e0aefaa79e18\nparent 3e55c2c2fa130752101dc0eecbaa03b539fc04dc\nauthor github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com> 1707404161 +0000\ncommitter GitHub <noreply@github.com> 1707404161 +0000\n\nMerge pull request #7 from ky1ejs/dependabot/npm_and_yarn/backend/graphql-codegen/typescript-4.0.4\n\nBump @graphql-codegen/typescript from 4.0.1 to 4.0.4 in /backend"
+        }
+      },
+      "url": "https://api.github.com/repos/ky1ejs/cut/commits/b481c741e192a04f7c4d092c862199bcc07bbd34",
+      "html_url": "https://github.com/ky1ejs/cut/commit/b481c741e192a04f7c4d092c862199bcc07bbd34",
+      "comments_url": "https://api.github.com/repos/ky1ejs/cut/commits/b481c741e192a04f7c4d092c862199bcc07bbd34/comments",
+      "author": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "6093f3b7ad6330989addeebcc765e0aefaa79e18",
+          "url": "https://api.github.com/repos/ky1ejs/cut/commits/6093f3b7ad6330989addeebcc765e0aefaa79e18",
+          "html_url": "https://github.com/ky1ejs/cut/commit/6093f3b7ad6330989addeebcc765e0aefaa79e18"
+        },
+        {
+          "sha": "3e55c2c2fa130752101dc0eecbaa03b539fc04dc",
+          "url": "https://api.github.com/repos/ky1ejs/cut/commits/3e55c2c2fa130752101dc0eecbaa03b539fc04dc",
+          "html_url": "https://github.com/ky1ejs/cut/commit/3e55c2c2fa130752101dc0eecbaa03b539fc04dc"
+        }
+      ]
+    },
+    {
+      "sha": "f3fcbb3503950fdc4617df88cce43829b39e7f10",
+      "node_id": "C_kwDOLMyswtoAKGYzZmNiYjM1MDM5NTBmZGM0NjE3ZGY4OGNjZTQzODI5YjM5ZTdmMTA",
+      "commit": {
+        "author": {
+          "name": "dependabot[bot]",
+          "email": "49699333+dependabot[bot]@users.noreply.github.com",
+          "date": "2024-02-08T14:57:22Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2024-02-08T14:57:22Z"
+        },
+        "message": "Bump @graphql-codegen/cli from 5.0.0 to 5.0.2 in /backend\n\nBumps [@graphql-codegen/cli](https://github.com/dotansimha/graphql-code-generator/tree/HEAD/packages/graphql-codegen-cli) from 5.0.0 to 5.0.2.\n- [Release notes](https://github.com/dotansimha/graphql-code-generator/releases)\n- [Changelog](https://github.com/dotansimha/graphql-code-generator/blob/master/packages/graphql-codegen-cli/CHANGELOG.md)\n- [Commits](https://github.com/dotansimha/graphql-code-generator/commits/@graphql-codegen/cli@5.0.2/packages/graphql-codegen-cli)\n\n---\nupdated-dependencies:\n- dependency-name: \"@graphql-codegen/cli\"\n  dependency-type: direct:development\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>",
+        "tree": {
+          "sha": "be879ce5b66f05083d4e04aebac219ff0feca913",
+          "url": "https://api.github.com/repos/ky1ejs/cut/git/trees/be879ce5b66f05083d4e04aebac219ff0feca913"
+        },
+        "url": "https://api.github.com/repos/ky1ejs/cut/git/commits/f3fcbb3503950fdc4617df88cce43829b39e7f10",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJlxOvSCRC1aQ7uu5UhlAAALzwQAHVMXF76t+Sa0jV/yHImyfb0\n2fBRDot7f2PqHDJKWHmlzZgt73XJvP13p+bp9GtTJo8VJhwN08xF/2CL0npYXhcY\n1HFSmCejhM/djeeeKyAoawsXTA2kdbXWWxLo0MO9MCInxNG12VoTaskS4yKQoYd/\nL39VSVZHV76YptVMDgs29zHz6xVll4MbeR7Tr4ulD9RNBXrlmGLhiET5J4xPE9Rq\nwxfGYBlEd5Bc9WKW16EZtlTsn4Ncyi88BTyHGToCYgLsd1KbDX2vucllN0mJnm1O\npQxoHoFv+TAwvUVDQKkUINZx5b4soaiMOJ6xC/xFBkDM2Y44OBh3rNBv8qHLU3/C\nETyyEPIr7IknMGTaoHjipCA6iZNz3sBPRPSakmaifVGOCfTTfVU7Kn6R97zQSAaL\naS78ehHyXJ3YDKeRK88xMTXtrBAW2Fx8hoD6RBP0j88IYtKxFDBcMHxfzR9+pSto\nZWsdNcLd5Fr4ULmQFMXEwxwC8CiDZYWXPgWp9NEu5JSbm/1wRwxTEfzcFN7QWntl\nFaRtCx4FUt9t2TJfK3RjKib+kOxHCLMMphuQgz/TBIXUF3JAzPBhhMDFvludkAmK\nFNKTYVT4g0H/Mz93gvpFrV2t0R6p189ff3fwX525hlANe3YZ0RYK/1JT7r7o15Xu\njgmZ+2VSUjykBGEbX6Ac\n=kfLk\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree be879ce5b66f05083d4e04aebac219ff0feca913\nparent b481c741e192a04f7c4d092c862199bcc07bbd34\nauthor dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com> 1707404242 +0000\ncommitter GitHub <noreply@github.com> 1707404242 +0000\n\nBump @graphql-codegen/cli from 5.0.0 to 5.0.2 in /backend\n\nBumps [@graphql-codegen/cli](https://github.com/dotansimha/graphql-code-generator/tree/HEAD/packages/graphql-codegen-cli) from 5.0.0 to 5.0.2.\n- [Release notes](https://github.com/dotansimha/graphql-code-generator/releases)\n- [Changelog](https://github.com/dotansimha/graphql-code-generator/blob/master/packages/graphql-codegen-cli/CHANGELOG.md)\n- [Commits](https://github.com/dotansimha/graphql-code-generator/commits/@graphql-codegen/cli@5.0.2/packages/graphql-codegen-cli)\n\n---\nupdated-dependencies:\n- dependency-name: \"@graphql-codegen/cli\"\n  dependency-type: direct:development\n  update-type: version-update:semver-patch\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>"
+        }
+      },
+      "url": "https://api.github.com/repos/ky1ejs/cut/commits/f3fcbb3503950fdc4617df88cce43829b39e7f10",
+      "html_url": "https://github.com/ky1ejs/cut/commit/f3fcbb3503950fdc4617df88cce43829b39e7f10",
+      "comments_url": "https://api.github.com/repos/ky1ejs/cut/commits/f3fcbb3503950fdc4617df88cce43829b39e7f10/comments",
+      "author": {
+        "login": "dependabot[bot]",
+        "id": 49699333,
+        "node_id": "MDM6Qm90NDk2OTkzMzM=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/29110?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/dependabot%5Bbot%5D",
+        "html_url": "https://github.com/apps/dependabot",
+        "followers_url": "https://api.github.com/users/dependabot%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/dependabot%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/dependabot%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/dependabot%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/dependabot%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/dependabot%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/dependabot%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/dependabot%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/dependabot%5Bbot%5D/received_events",
+        "type": "Bot",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "b481c741e192a04f7c4d092c862199bcc07bbd34",
+          "url": "https://api.github.com/repos/ky1ejs/cut/commits/b481c741e192a04f7c4d092c862199bcc07bbd34",
+          "html_url": "https://github.com/ky1ejs/cut/commit/b481c741e192a04f7c4d092c862199bcc07bbd34"
+        }
+      ]
+    },
+    {
+      "sha": "e4bde281e0d6820e61920c7eb4210d58cc9ae755",
+      "node_id": "C_kwDOLMyswtoAKGU0YmRlMjgxZTBkNjgyMGU2MTkyMGM3ZWI0MjEwZDU4Y2M5YWU3NTU",
+      "commit": {
+        "author": {
+          "name": "github-actions[bot]",
+          "email": "41898282+github-actions[bot]@users.noreply.github.com",
+          "date": "2024-02-08T14:57:36Z"
+        },
+        "committer": {
+          "name": "GitHub",
+          "email": "noreply@github.com",
+          "date": "2024-02-08T14:57:36Z"
+        },
+        "message": "Merge pull request #6 from ky1ejs/dependabot/npm_and_yarn/backend/graphql-codegen/cli-5.0.2\n\nBump @graphql-codegen/cli from 5.0.0 to 5.0.2 in /backend",
+        "tree": {
+          "sha": "be879ce5b66f05083d4e04aebac219ff0feca913",
+          "url": "https://api.github.com/repos/ky1ejs/cut/git/trees/be879ce5b66f05083d4e04aebac219ff0feca913"
+        },
+        "url": "https://api.github.com/repos/ky1ejs/cut/git/commits/e4bde281e0d6820e61920c7eb4210d58cc9ae755",
+        "comment_count": 0,
+        "verification": {
+          "verified": true,
+          "reason": "valid",
+          "signature": "-----BEGIN PGP SIGNATURE-----\n\nwsFcBAABCAAQBQJlxOvgCRC1aQ7uu5UhlAAA19IQAC0txW70Iap537kwA+pfVTex\n67aV9SEQFWhEQaG4GIde22pMSPRwr+wCYwmau+5n+3dS68lXftNsToQ0Ht4jHx84\nq9rvJ6DiAfm3jTTKJ1V29hnRJn3UXT/lrHXXZNFSUscS1IpCoAgaq5WZAVdB2xP0\nZYlTjM1WjFYMa/r0EoFGUMhaqduuJBR0cIryDoGV1Qt4DAALFndOm7d/Uyhu/VTi\nMn+OJ83hm/kslVl9zF6JIycTWOnWq1VFtXqHt/4tJkP78Hpn9M98rzpEEFG7Yq6W\n+hyqrfxRlSgjCXa+QzuUw1imiUg6mhCwGumFpN3ePNJRAt8mw8xOM1Kj+VSGbJg+\n1zImpBFRwoIPP+YiiGiMrusk1hwGdM3sw7SzO5i5Rn9P8SOGFz5ztHchw2wE3q9W\nDptu1bYXqckWkAJ01ifaS1Xm9dtTnLnSCtl2Mjy9KcSPEfNyPMb/wUTfxmzZVpkX\n8rskkHs3Ethn7o0Njv5YjbqBvt499Qp6EwVwwbkrskNoWgJN0EbCKbs4EHVL8bBv\npJNv82HZG35G+YqVRJXWoOJ4F2iI7Y2eQujop7PlamCkHrSfJfyqM4qbm+pjS45n\npqGWbuut4ZStQUWHg9wUfZnpywLHi/MdzwhZYm5vbgjCVoYM+HlQT9Y41kUSWjJ5\n7o0fvRMRmk05B5i8YpnN\n=wOZn\n-----END PGP SIGNATURE-----\n",
+          "payload": "tree be879ce5b66f05083d4e04aebac219ff0feca913\nparent b481c741e192a04f7c4d092c862199bcc07bbd34\nparent f3fcbb3503950fdc4617df88cce43829b39e7f10\nauthor github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com> 1707404256 +0000\ncommitter GitHub <noreply@github.com> 1707404256 +0000\n\nMerge pull request #6 from ky1ejs/dependabot/npm_and_yarn/backend/graphql-codegen/cli-5.0.2\n\nBump @graphql-codegen/cli from 5.0.0 to 5.0.2 in /backend"
+        }
+      },
+      "url": "https://api.github.com/repos/ky1ejs/cut/commits/e4bde281e0d6820e61920c7eb4210d58cc9ae755",
+      "html_url": "https://github.com/ky1ejs/cut/commit/e4bde281e0d6820e61920c7eb4210d58cc9ae755",
+      "comments_url": "https://api.github.com/repos/ky1ejs/cut/commits/e4bde281e0d6820e61920c7eb4210d58cc9ae755/comments",
+      "author": {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "web-flow",
+        "id": 19864447,
+        "node_id": "MDQ6VXNlcjE5ODY0NDQ3",
+        "avatar_url": "https://avatars.githubusercontent.com/u/19864447?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/web-flow",
+        "html_url": "https://github.com/web-flow",
+        "followers_url": "https://api.github.com/users/web-flow/followers",
+        "following_url": "https://api.github.com/users/web-flow/following{/other_user}",
+        "gists_url": "https://api.github.com/users/web-flow/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/web-flow/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/web-flow/subscriptions",
+        "organizations_url": "https://api.github.com/users/web-flow/orgs",
+        "repos_url": "https://api.github.com/users/web-flow/repos",
+        "events_url": "https://api.github.com/users/web-flow/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/web-flow/received_events",
+        "type": "User",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "b481c741e192a04f7c4d092c862199bcc07bbd34",
+          "url": "https://api.github.com/repos/ky1ejs/cut/commits/b481c741e192a04f7c4d092c862199bcc07bbd34",
+          "html_url": "https://github.com/ky1ejs/cut/commit/b481c741e192a04f7c4d092c862199bcc07bbd34"
+        },
+        {
+          "sha": "f3fcbb3503950fdc4617df88cce43829b39e7f10",
+          "url": "https://api.github.com/repos/ky1ejs/cut/commits/f3fcbb3503950fdc4617df88cce43829b39e7f10",
+          "html_url": "https://github.com/ky1ejs/cut/commit/f3fcbb3503950fdc4617df88cce43829b39e7f10"
+        }
+      ]
+    }
+  ],
+  "files": [
+    {
+      "sha": "76e6f32d81fb8484c5b22ee32fc676abc725b826",
+      "filename": "backend/pnpm-lock.yaml",
+      "status": "modified",
+      "additions": 85,
+      "deletions": 58,
+      "changes": 143,
+      "blob_url": "https://github.com/ky1ejs/cut/blob/e4bde281e0d6820e61920c7eb4210d58cc9ae755/backend%2Fpnpm-lock.yaml",
+      "raw_url": "https://github.com/ky1ejs/cut/raw/e4bde281e0d6820e61920c7eb4210d58cc9ae755/backend%2Fpnpm-lock.yaml",
+      "contents_url": "https://api.github.com/repos/ky1ejs/cut/contents/backend%2Fpnpm-lock.yaml?ref=e4bde281e0d6820e61920c7eb4210d58cc9ae755",
+      "patch": "@@ -30,10 +30,10 @@ dependencies:\n devDependencies:\n   '@graphql-codegen/cli':\n     specifier: ^5.0.0\n-    version: 5.0.0(@types/node@20.11.16)(graphql@16.8.1)(typescript@5.3.3)\n+    version: 5.0.2(@types/node@20.11.16)(graphql@16.8.1)(typescript@5.3.3)\n   '@graphql-codegen/typescript':\n     specifier: ^4.0.1\n-    version: 4.0.1(graphql@16.8.1)\n+    version: 4.0.4(graphql@16.8.1)\n   '@graphql-codegen/typescript-resolvers':\n     specifier: ^4.0.1\n     version: 4.0.4(graphql@16.8.1)\n@@ -846,8 +846,18 @@ packages:\n       '@jridgewell/trace-mapping': 0.3.9\n     dev: true\n \n-  /@graphql-codegen/cli@5.0.0(@types/node@20.11.16)(graphql@16.8.1)(typescript@5.3.3):\n-    resolution: {integrity: sha512-A7J7+be/a6e+/ul2KI5sfJlpoqeqwX8EzktaKCeduyVKgOLA6W5t+NUGf6QumBDXU8PEOqXk3o3F+RAwCWOiqA==}\n+  /@graphql-codegen/add@5.0.2(graphql@16.8.1):\n+    resolution: {integrity: sha512-ouBkSvMFUhda5VoKumo/ZvsZM9P5ZTyDsI8LW18VxSNWOjrTeLXBWHG8Gfaai0HwhflPtCYVABbriEcOmrRShQ==}\n+    peerDependencies:\n+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n+    dependencies:\n+      '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n+      graphql: 16.8.1\n+      tslib: 2.6.2\n+    dev: true\n+\n+  /@graphql-codegen/cli@5.0.2(@types/node@20.11.16)(graphql@16.8.1)(typescript@5.3.3):\n+    resolution: {integrity: sha512-MBIaFqDiLKuO4ojN6xxG9/xL9wmfD3ZjZ7RsPjwQnSHBCUXnEkdKvX+JVpx87Pq29Ycn8wTJUguXnTZ7Di0Mlw==}\n     hasBin: true\n     peerDependencies:\n       '@parcel/watcher': ^2.1.0\n@@ -859,8 +869,9 @@ packages:\n       '@babel/generator': 7.23.6\n       '@babel/template': 7.23.9\n       '@babel/types': 7.23.9\n-      '@graphql-codegen/core': 4.0.0(graphql@16.8.1)\n-      '@graphql-codegen/plugin-helpers': 5.0.1(graphql@16.8.1)\n+      '@graphql-codegen/client-preset': 4.2.2(graphql@16.8.1)\n+      '@graphql-codegen/core': 4.0.2(graphql@16.8.1)\n+      '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n       '@graphql-tools/apollo-engine-loader': 8.0.0(graphql@16.8.1)\n       '@graphql-tools/code-file-loader': 8.1.0(graphql@16.8.1)\n       '@graphql-tools/git-loader': 8.0.4(graphql@16.8.1)\n@@ -902,55 +913,70 @@ packages:\n       - utf-8-validate\n     dev: true\n \n-  /@graphql-codegen/core@4.0.0(graphql@16.8.1):\n-    resolution: {integrity: sha512-JAGRn49lEtSsZVxeIlFVIRxts2lWObR+OQo7V2LHDJ7ohYYw3ilv7nJ8pf8P4GTg/w6ptcYdSdVVdkI8kUHB/Q==}\n+  /@graphql-codegen/client-preset@4.2.2(graphql@16.8.1):\n+    resolution: {integrity: sha512-DF9pNWj3TEdA90E9FH5SsUIqiZfr872vqaQOspLVuVXGsaDx8F/JLLzaN+7ucmoo0ff/bLW8munVXYXTmgwwEA==}\n     peerDependencies:\n       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n     dependencies:\n+      '@babel/helper-plugin-utils': 7.22.5\n+      '@babel/template': 7.23.9\n+      '@graphql-codegen/add': 5.0.2(graphql@16.8.1)\n+      '@graphql-codegen/gql-tag-operations': 4.0.4(graphql@16.8.1)\n       '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n-      '@graphql-tools/schema': 10.0.2(graphql@16.8.1)\n+      '@graphql-codegen/typed-document-node': 5.0.4(graphql@16.8.1)\n+      '@graphql-codegen/typescript': 4.0.4(graphql@16.8.1)\n+      '@graphql-codegen/typescript-operations': 4.1.2(graphql@16.8.1)\n+      '@graphql-codegen/visitor-plugin-common': 4.1.2(graphql@16.8.1)\n+      '@graphql-tools/documents': 1.0.0(graphql@16.8.1)\n       '@graphql-tools/utils': 10.0.13(graphql@16.8.1)\n+      '@graphql-typed-document-node/core': 3.2.0(graphql@16.8.1)\n       graphql: 16.8.1\n-      tslib: 2.5.3\n+      tslib: 2.6.2\n+    transitivePeerDependencies:\n+      - encoding\n+      - supports-color\n     dev: true\n \n-  /@graphql-codegen/plugin-helpers@5.0.1(graphql@16.8.1):\n-    resolution: {integrity: sha512-6L5sb9D8wptZhnhLLBcheSPU7Tg//DGWgc5tQBWX46KYTOTQHGqDpv50FxAJJOyFVJrveN9otWk9UT9/yfY4ww==}\n+  /@graphql-codegen/core@4.0.2(graphql@16.8.1):\n+    resolution: {integrity: sha512-IZbpkhwVqgizcjNiaVzNAzm/xbWT6YnGgeOLwVjm4KbJn3V2jchVtuzHH09G5/WkkLSk2wgbXNdwjM41JxO6Eg==}\n     peerDependencies:\n       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n     dependencies:\n+      '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n+      '@graphql-tools/schema': 10.0.2(graphql@16.8.1)\n       '@graphql-tools/utils': 10.0.13(graphql@16.8.1)\n-      change-case-all: 1.0.15\n-      common-tags: 1.8.2\n       graphql: 16.8.1\n-      import-from: 4.0.0\n-      lodash: 4.17.21\n-      tslib: 2.5.3\n+      tslib: 2.6.2\n     dev: true\n \n-  /@graphql-codegen/plugin-helpers@5.0.3(graphql@16.8.1):\n-    resolution: {integrity: sha512-yZ1rpULIWKBZqCDlvGIJRSyj1B2utkEdGmXZTBT/GVayP4hyRYlkd36AJV/LfEsVD8dnsKL5rLz2VTYmRNlJ5Q==}\n+  /@graphql-codegen/gql-tag-operations@4.0.4(graphql@16.8.1):\n+    resolution: {integrity: sha512-dypul0iDLjb07yv+/cRb6qPbn42cFPcwlsJertVl9G6qkS4+3V4806WwSfUht4QVMWnvGfgDkJJqG0yUVKOHwA==}\n     peerDependencies:\n       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n     dependencies:\n+      '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n+      '@graphql-codegen/visitor-plugin-common': 4.1.2(graphql@16.8.1)\n       '@graphql-tools/utils': 10.0.13(graphql@16.8.1)\n-      change-case-all: 1.0.15\n-      common-tags: 1.8.2\n+      auto-bind: 4.0.0\n       graphql: 16.8.1\n-      import-from: 4.0.0\n-      lodash: 4.17.21\n       tslib: 2.6.2\n+    transitivePeerDependencies:\n+      - encoding\n+      - supports-color\n     dev: true\n \n-  /@graphql-codegen/schema-ast@4.0.0(graphql@16.8.1):\n-    resolution: {integrity: sha512-WIzkJFa9Gz28FITAPILbt+7A8+yzOyd1NxgwFh7ie+EmO9a5zQK6UQ3U/BviirguXCYnn+AR4dXsoDrSrtRA1g==}\n+  /@graphql-codegen/plugin-helpers@5.0.3(graphql@16.8.1):\n+    resolution: {integrity: sha512-yZ1rpULIWKBZqCDlvGIJRSyj1B2utkEdGmXZTBT/GVayP4hyRYlkd36AJV/LfEsVD8dnsKL5rLz2VTYmRNlJ5Q==}\n     peerDependencies:\n       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n     dependencies:\n-      '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n       '@graphql-tools/utils': 10.0.13(graphql@16.8.1)\n+      change-case-all: 1.0.15\n+      common-tags: 1.8.2\n       graphql: 16.8.1\n-      tslib: 2.5.3\n+      import-from: 4.0.0\n+      lodash: 4.17.21\n+      tslib: 2.6.2\n     dev: true\n \n   /@graphql-codegen/schema-ast@4.0.2(graphql@16.8.1):\n@@ -964,47 +990,47 @@ packages:\n       tslib: 2.6.2\n     dev: true\n \n-  /@graphql-codegen/typescript-resolvers@4.0.4(graphql@16.8.1):\n-    resolution: {integrity: sha512-o1FEbvoTgF32n2YL8dJmtRYlIjKy16hyQz+co5Mj9yR9c1CtWrvjnlB7WeTAVJRhasqYloXXfLXb+efhMkUl9A==}\n+  /@graphql-codegen/typed-document-node@5.0.4(graphql@16.8.1):\n+    resolution: {integrity: sha512-t66Z6erQ4Dh1j6f9pRZmc8uYtHoUI3A49tLmJAlg9/3IV0kCmwrWKJut/G8SeOefDLG8cXBTVtI/YuZOe1Te+w==}\n     peerDependencies:\n       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n     dependencies:\n       '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n-      '@graphql-codegen/typescript': 4.0.4(graphql@16.8.1)\n       '@graphql-codegen/visitor-plugin-common': 4.1.2(graphql@16.8.1)\n-      '@graphql-tools/utils': 10.0.13(graphql@16.8.1)\n       auto-bind: 4.0.0\n+      change-case-all: 1.0.15\n       graphql: 16.8.1\n       tslib: 2.6.2\n     transitivePeerDependencies:\n       - encoding\n       - supports-color\n     dev: true\n \n-  /@graphql-codegen/typescript@4.0.1(graphql@16.8.1):\n-    resolution: {integrity: sha512-3YziQ21dCVdnHb+Us1uDb3pA6eG5Chjv0uTK+bt9dXeMlwYBU8MbtzvQTo4qvzWVC1AxSOKj0rgfNu1xCXqJyA==}\n+  /@graphql-codegen/typescript-operations@4.1.2(graphql@16.8.1):\n+    resolution: {integrity: sha512-CtCWK+gW7hS+Ely3lohr8CL1HVLswQzMcaUk3k1sxdWCWKTNq7abMsWa31rTVwRCJ+WNEkM/7S8sIBTpEG683A==}\n     peerDependencies:\n-      graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n     dependencies:\n-      '@graphql-codegen/plugin-helpers': 5.0.1(graphql@16.8.1)\n-      '@graphql-codegen/schema-ast': 4.0.0(graphql@16.8.1)\n-      '@graphql-codegen/visitor-plugin-common': 4.0.1(graphql@16.8.1)\n+      '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n+      '@graphql-codegen/typescript': 4.0.4(graphql@16.8.1)\n+      '@graphql-codegen/visitor-plugin-common': 4.1.2(graphql@16.8.1)\n       auto-bind: 4.0.0\n       graphql: 16.8.1\n-      tslib: 2.5.3\n+      tslib: 2.6.2\n     transitivePeerDependencies:\n       - encoding\n       - supports-color\n     dev: true\n \n-  /@graphql-codegen/typescript@4.0.4(graphql@16.8.1):\n-    resolution: {integrity: sha512-x79CKLfP9UQCX+/I78qxQlMs2Mmq3pF1lKafZo7lAno0f/fvJ+qWUduzdgjRNz+YL+5blGeWcC0pWEDxniO7hw==}\n+  /@graphql-codegen/typescript-resolvers@4.0.4(graphql@16.8.1):\n+    resolution: {integrity: sha512-o1FEbvoTgF32n2YL8dJmtRYlIjKy16hyQz+co5Mj9yR9c1CtWrvjnlB7WeTAVJRhasqYloXXfLXb+efhMkUl9A==}\n     peerDependencies:\n-      graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n     dependencies:\n       '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n-      '@graphql-codegen/schema-ast': 4.0.2(graphql@16.8.1)\n+      '@graphql-codegen/typescript': 4.0.4(graphql@16.8.1)\n       '@graphql-codegen/visitor-plugin-common': 4.1.2(graphql@16.8.1)\n+      '@graphql-tools/utils': 10.0.13(graphql@16.8.1)\n       auto-bind: 4.0.0\n       graphql: 16.8.1\n       tslib: 2.6.2\n@@ -1013,22 +1039,17 @@ packages:\n       - supports-color\n     dev: true\n \n-  /@graphql-codegen/visitor-plugin-common@4.0.1(graphql@16.8.1):\n-    resolution: {integrity: sha512-Bi/1z0nHg4QMsAqAJhds+ForyLtk7A3HQOlkrZNm3xEkY7lcBzPtiOTLBtvziwopBsXUxqeSwVjOOFPLS5Yw1Q==}\n+  /@graphql-codegen/typescript@4.0.4(graphql@16.8.1):\n+    resolution: {integrity: sha512-x79CKLfP9UQCX+/I78qxQlMs2Mmq3pF1lKafZo7lAno0f/fvJ+qWUduzdgjRNz+YL+5blGeWcC0pWEDxniO7hw==}\n     peerDependencies:\n-      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n+      graphql: ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0\n     dependencies:\n       '@graphql-codegen/plugin-helpers': 5.0.3(graphql@16.8.1)\n-      '@graphql-tools/optimize': 2.0.0(graphql@16.8.1)\n-      '@graphql-tools/relay-operation-optimizer': 7.0.0(graphql@16.8.1)\n-      '@graphql-tools/utils': 10.0.13(graphql@16.8.1)\n+      '@graphql-codegen/schema-ast': 4.0.2(graphql@16.8.1)\n+      '@graphql-codegen/visitor-plugin-common': 4.1.2(graphql@16.8.1)\n       auto-bind: 4.0.0\n-      change-case-all: 1.0.15\n-      dependency-graph: 0.11.0\n       graphql: 16.8.1\n-      graphql-tag: 2.12.6(graphql@16.8.1)\n-      parse-filepath: 1.0.2\n-      tslib: 2.5.3\n+      tslib: 2.6.2\n     transitivePeerDependencies:\n       - encoding\n       - supports-color\n@@ -1114,6 +1135,17 @@ packages:\n       tslib: 2.6.2\n     dev: true\n \n+  /@graphql-tools/documents@1.0.0(graphql@16.8.1):\n+    resolution: {integrity: sha512-rHGjX1vg/nZ2DKqRGfDPNC55CWZBMldEVcH+91BThRa6JeT80NqXknffLLEZLRUxyikCfkwMsk6xR3UNMqG0Rg==}\n+    engines: {node: '>=16.0.0'}\n+    peerDependencies:\n+      graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0\n+    dependencies:\n+      graphql: 16.8.1\n+      lodash.sortby: 4.7.0\n+      tslib: 2.6.2\n+    dev: true\n+\n   /@graphql-tools/executor-graphql-ws@1.1.0(graphql@16.8.1):\n     resolution: {integrity: sha512-yM67SzwE8rYRpm4z4AuGtABlOp9mXXVy6sxXnTJRoYIdZrmDbKVfIY+CpZUJCqS0FX3xf2+GoHlsj7Qswaxgcg==}\n     engines: {node: '>=16.0.0'}\n@@ -3073,7 +3105,6 @@ packages:\n \n   /lodash.sortby@4.7.0:\n     resolution: {integrity: sha512-HDWXG8isMntAyRF5vZ7xKuEvOhT4AhlRt/3czTSjvGUxjYCBVRQY48ViDHyfYz9VIoBkW4TMGQNapx+l3RUwdA==}\n-    dev: false\n \n   /lodash@4.17.21:\n     resolution: {integrity: sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==}\n@@ -3891,10 +3922,6 @@ packages:\n       yn: 3.1.1\n     dev: true\n \n-  /tslib@2.5.3:\n-    resolution: {integrity: sha512-mSxlJJwl3BMEQCUNnxXBU9jP4JBktcEGhURcPR6VQVlnP0FdDEsIaz0C35dXNGLyRfrATNofF0F5p2KPxQgB+w==}\n-    dev: true\n-\n   /tslib@2.6.2:\n     resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}\n "
+    }
+  ]
+}
