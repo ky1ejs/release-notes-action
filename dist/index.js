@@ -29118,12 +29118,14 @@ async function buildReleaseNotes(input) {
             }
         });
     });
-    let changelog = '';
-    for (const [number, pr] of mergedPullRequests) {
-        changelog += `* ${pr.title} (#${number})\n`;
+    let changelog = '# Changes\n\nHere are the latest changes in the reverse chronological order:\n\n';
+    Array.from(mergedPullRequests.values())
+        .sort((a, b) => a.number - b.number)
+        .forEach(pr => {
+        changelog += `* ${pr.title} (#${pr.number})\n`;
         core.setOutput('release-notes', changelog);
         core.info(changelog);
-    }
+    });
 }
 exports.buildReleaseNotes = buildReleaseNotes;
 

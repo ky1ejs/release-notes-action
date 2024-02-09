@@ -1,3 +1,6 @@
+
+Inspired by [release-changelog-builder-action](https://github.com/mikepenz/release-changelog-builder-action).
+
 # Create a GitHub Action Using TypeScript
 
 [![GitHub Super-Linter](https://github.com/actions/typescript-action/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
