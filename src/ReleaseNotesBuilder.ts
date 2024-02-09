@@ -30,24 +30,41 @@ export async function buildReleaseNotes(input: BuilderInput): Promise<void> {
     .then(response => {
       return response.data.tag_name
     })
-  const commits = await oktokit.rest.repos
-    .compareCommits({
-      owner: repoOwner,
-      repo: repoName,
-      base: lastTag,
-      head: latestCommitHash
-    })
-    .then(response => {
-      return response.data.commits
-    })
-  core.info(`Found ${commits.length} commits since last release`)
+    .catch(() => null)
+
+  let commits: string[]
+  if (!lastTag) {
+    commits = await oktokit.paginate(
+      oktokit.rest.repos.listCommits,
+      {
+        owner: repoOwner,
+        repo: repoName,
+        per_page: 100
+      },
+      response => {
+        return response.data.map(c => c.sha)
+      }
+    )
+  } else {
+    commits = await oktokit.rest.repos
+      .compareCommits({
+        owner: repoOwner,
+        repo: repoName,
+        base: lastTag,
+        head: latestCommitHash
+      })
+      .then(response => {
+        return response.data.commits.map(c => c.sha)
+      })
+    core.info(`Found ${commits.length} commits since last release`)
+  }
 
   const commitFetchesPromises = commits.map(async c => {
-    core.info(`Fetching: ${c.sha}`)
+    core.info(`Fetching: ${c}`)
     return oktokit.rest.repos.listPullRequestsAssociatedWithCommit({
       owner: repoOwner,
       repo: repoName,
-      commit_sha: c.sha
+      commit_sha: c
     })
   })
   const commitFetches = await Promise.all(commitFetchesPromises)

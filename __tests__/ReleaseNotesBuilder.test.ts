@@ -8,12 +8,13 @@ jest.setTimeout(180000)
 
 /* eslint-disable jest/no-disabled-tests */
 /* eslint-disable jest/expect-expect */
-describe.skip('wait.ts', () => {
+describe('wait.ts', () => {
   it('runs', async () => {
     await buildReleaseNotes({
-      githubToken: '',
-      repoOwner: '',
-      repoName: ''
+      githubToken:
+        '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',
+      repoOwner: 'ky1ejs',
+      repoName: 'release-notes-action'
     })
   })
 })
