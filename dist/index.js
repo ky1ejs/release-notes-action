@@ -29145,13 +29145,10 @@ var __importStar = (this && this.__importStar) || function (mod) {
     __setModuleDefault(result, mod);
     return result;
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.run = void 0;
 const core = __importStar(__nccwpck_require__(2186));
-const github_1 = __importDefault(__nccwpck_require__(5438));
+const github = __importStar(__nccwpck_require__(5438));
 const ReleaseNotesBuilder_1 = __nccwpck_require__(3758);
 /**
  * The main function for the action.
@@ -29160,8 +29157,8 @@ const ReleaseNotesBuilder_1 = __nccwpck_require__(3758);
 async function run() {
     await (0, ReleaseNotesBuilder_1.buildReleaseNotes)({
         githubToken: core.getInput('github-token'),
-        repoOwner: github_1.default.context.repo.owner,
-        repoName: github_1.default.context.repo.repo
+        repoOwner: github.context.repo.owner,
+        repoName: github.context.repo.repo
     });
 }
 exports.run = run;
