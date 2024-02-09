@@ -1,4 +1,6 @@
 
+# `release-notes-action`
+
 Inspired by [release-changelog-builder-action](https://github.com/mikepenz/release-changelog-builder-action).
 
 # Create a GitHub Action Using TypeScript
