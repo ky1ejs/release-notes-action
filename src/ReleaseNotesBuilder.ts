@@ -72,9 +72,18 @@ export async function buildReleaseNotes(input: BuilderInput): Promise<void> {
   commitFetches.forEach(prs => {
     prs.data.forEach(pr => {
       if (pr && !!pr.merged_at && pr.labels.map(l => l.name).includes('ios')) {
+        let author: GitHubUser | undefined
+        if (pr.user) {
+          author = {
+            username: pr.user.login,
+            url: pr.user.html_url
+          }
+        }
         mergedPullRequests.set(pr.number, {
           number: pr.number,
-          title: pr.title
+          title: pr.title,
+          url: pr.html_url,
+          author
         })
       }
     })
@@ -84,7 +93,11 @@ export async function buildReleaseNotes(input: BuilderInput): Promise<void> {
   Array.from(mergedPullRequests.values())
     .sort((a, b) => a.number - b.number)
     .forEach(pr => {
-      changelog += `* ${pr.title} (#${pr.number})\n`
+      let newItem = `* ([#${pr.number}](${pr.url})) ${pr.title}`
+      if (pr.author) {
+        newItem += ` by [@${pr.author.username}](${pr.author.url})`
+      }
+      changelog += newItem + '\n'
       core.setOutput('release-notes', changelog)
       core.info(changelog)
     })
@@ -93,4 +106,11 @@ export async function buildReleaseNotes(input: BuilderInput): Promise<void> {
 export interface PullRequestInfo {
   number: number
   title: string
+  url: string
+  author?: GitHubUser
+}
+
+export interface GitHubUser {
+  username: string
+  url: string
 }
