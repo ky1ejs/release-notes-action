@@ -29129,7 +29129,7 @@ async function buildReleaseNotes(input) {
     });
     let changelog = '# Changes\n\nHere are the latest changes in the reverse chronological order:\n\n';
     Array.from(mergedPullRequests.values())
-        .sort((a, b) => a.number - b.number)
+        .sort((a, b) => b.number - a.number)
         .forEach(pr => {
         let newItem = `* ([#${pr.number}](${pr.url})) ${pr.title}`;
         if (pr.author) {
