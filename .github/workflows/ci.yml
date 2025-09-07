@@ -55,8 +55,9 @@ jobs:
         id: test-action
         uses: ./
         with:
-          milliseconds: 2000
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          output-formats: '["markdown", "plaintext"]'
 
       - name: Print Output
         id: output
-        run: echo "${{ steps.test-action.outputs.time }}"
+        run: echo "${{ steps.test-action.outputs.release-notes }}" && echo "${{ steps.test-action.outputs.release-notes-plaintext }}"
