@@ -1,11 +1,11 @@
-import { PullRequestInfo, GitHubUser } from '../ReleaseNotesBuilder'
+import { PullRequestInfo } from '../ReleaseNotesBuilder'
 
 export function generateMarkdownChangelog(
   pullRequests: PullRequestInfo[]
 ): string {
   let changelog =
     '# Changes\n\nHere are the latest changes in the reverse chronological order:\n\n'
-  
+
   pullRequests
     .sort((a, b) => b.number - a.number)
     .forEach(pr => {
@@ -15,7 +15,7 @@ export function generateMarkdownChangelog(
       }
       changelog += newItem + '\n'
     })
-  
+
   return changelog
 }
 
@@ -24,7 +24,7 @@ export function generatePlaintextChangelog(
 ): string {
   let changelog =
     'Changes\n=======\nHere are the latest changes in the reverse chronological order:\n\n'
-  
+
   pullRequests
     .sort((a, b) => b.number - a.number)
     .forEach(pr => {
@@ -34,6 +34,6 @@ export function generatePlaintextChangelog(
       }
       changelog += newItem + '\n'
     })
-  
+
   return changelog
 }

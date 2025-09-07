@@ -1,11 +1,12 @@
 import * as core from '@actions/core'
+import { RequestError } from '@octokit/request-error'
 
 export interface RetryOptions {
   maxRetries?: number
   initialDelay?: number
   maxDelay?: number
   backoffMultiplier?: number
-  shouldRetry?: (error: unknown) => boolean
+  shouldRetry?: (error: Error | RequestError) => boolean
 }
 
 const DEFAULT_OPTIONS: Required<RetryOptions> = {
@@ -13,21 +14,10 @@ const DEFAULT_OPTIONS: Required<RetryOptions> = {
   initialDelay: 1000,
   maxDelay: 30000,
   backoffMultiplier: 2,
-  shouldRetry: (error: unknown) => {
-    if (!error || typeof error !== 'object') {
-      return false
-    }
-
-    const err = error as any
-
-    // Network errors
-    if (err.code && ['ECONNRESET', 'ETIMEDOUT', 'ENOTFOUND', 'ECONNREFUSED'].includes(err.code)) {
-      return true
-    }
-
-    // HTTP status codes
-    if (err.status) {
-      const status = err.status
+  shouldRetry: (error: Error | RequestError) => {
+    // Check if it's a RequestError from Octokit
+    if (error instanceof RequestError) {
+      const status = error.status
       // Retry on server errors (5xx)
       if (status >= 500 && status < 600) {
         return true
@@ -40,13 +30,19 @@ const DEFAULT_OPTIONS: Required<RetryOptions> = {
       if (status === 408) {
         return true
       }
-    }
-
-    // Octokit specific errors
-    if (err.response?.status) {
-      const status = err.response.status
-      if (status >= 500 || status === 429 || status === 408) {
-        return true
+    } else if ('code' in error) {
+      // Check for Node.js network errors (not RequestError, which also has a numeric 'code')
+      const nodeError = error as NodeJS.ErrnoException
+      if (typeof nodeError.code === 'string') {
+        const retryableCodes = [
+          'ECONNRESET',
+          'ETIMEDOUT',
+          'ENOTFOUND',
+          'ECONNREFUSED'
+        ]
+        if (retryableCodes.includes(nodeError.code)) {
+          return true
+        }
       }
     }
 
@@ -54,7 +50,7 @@ const DEFAULT_OPTIONS: Required<RetryOptions> = {
   }
 }
 
-function sleep(ms: number): Promise<void> {
+async function sleep(ms: number): Promise<void> {
   return new Promise(resolve => setTimeout(resolve, ms))
 }
 
@@ -69,7 +65,7 @@ export async function retry<T>(
   context?: string
 ): Promise<T> {
   const opts = { ...DEFAULT_OPTIONS, ...options }
-  let lastError: unknown
+  let lastError: Error | undefined
   let delay = opts.initialDelay
 
   for (let attempt = 0; attempt <= opts.maxRetries; attempt++) {
@@ -87,33 +83,33 @@ export async function retry<T>(
 
       return await fn()
     } catch (error) {
-      lastError = error
+      // Ensure we have an Error object
+      const errorObj = error instanceof Error ? error : new Error(String(error))
+      lastError = errorObj
 
       if (attempt === opts.maxRetries) {
         core.error(
           `${context ? `[${context}] ` : ''}All ${opts.maxRetries} retry attempts failed`
         )
-        throw error
+        throw errorObj
       }
 
-      if (!opts.shouldRetry(error)) {
+      if (!opts.shouldRetry(errorObj)) {
         core.debug(
-          `${context ? `[${context}] ` : ''}Error is not retryable: ${
-            error instanceof Error ? error.message : String(error)
-          }`
+          `${context ? `[${context}] ` : ''}Error is not retryable: ${errorObj.message}`
         )
-        throw error
+        throw errorObj
       }
 
       core.warning(
         `${context ? `[${context}] ` : ''}Request failed (attempt ${attempt + 1}/${
           opts.maxRetries + 1
-        }): ${error instanceof Error ? error.message : String(error)}`
+        }): ${errorObj.message}`
       )
     }
   }
 
-  throw lastError
+  throw lastError || new Error('Retry failed with unknown error')
 }
 
 export async function retryOctokit<T>(

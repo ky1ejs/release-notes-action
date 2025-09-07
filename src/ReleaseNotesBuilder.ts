@@ -25,7 +25,7 @@ export async function buildReleaseNotes(input: BuilderInput): Promise<void> {
     auth: githubToken
   })
   const latestCommitHash = await retryOctokit(
-    () =>
+    async () =>
       oktokit.rest.repos
         .getCommit({
           owner: repoOwner,
@@ -38,7 +38,7 @@ export async function buildReleaseNotes(input: BuilderInput): Promise<void> {
     'Get latest commit hash'
   )
   const lastTag = await retryOctokit(
-    () =>
+    async () =>
       oktokit.rest.repos
         .getLatestRelease({
           owner: repoOwner,
@@ -54,7 +54,7 @@ export async function buildReleaseNotes(input: BuilderInput): Promise<void> {
   let commits: string[]
   if (!lastTag) {
     commits = await retryOctokit(
-      () =>
+      async () =>
         oktokit.paginate(
           oktokit.rest.repos.listCommits,
           {
@@ -70,7 +70,7 @@ export async function buildReleaseNotes(input: BuilderInput): Promise<void> {
     )
   } else {
     commits = await retryOctokit(
-      () =>
+      async () =>
         oktokit.rest.repos
           .compareCommits({
             owner: repoOwner,
@@ -89,7 +89,7 @@ export async function buildReleaseNotes(input: BuilderInput): Promise<void> {
   const commitFetchesPromises = commits.map(async c => {
     core.info(`Fetching: ${c}`)
     return retryOctokit(
-      () =>
+      async () =>
         oktokit.rest.repos.listPullRequestsAssociatedWithCommit({
           owner: repoOwner,
           repo: repoName,

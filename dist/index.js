@@ -29059,7 +29059,7 @@ async function buildReleaseNotes(input) {
     const oktokit = new rest_1.Octokit({
         auth: githubToken
     });
-    const latestCommitHash = await (0, retry_1.retryOctokit)(() => oktokit.rest.repos
+    const latestCommitHash = await (0, retry_1.retryOctokit)(async () => oktokit.rest.repos
         .getCommit({
         owner: repoOwner,
         repo: repoName,
@@ -29068,7 +29068,7 @@ async function buildReleaseNotes(input) {
         .then(response => {
         return response.data.sha;
     }), 'Get latest commit hash');
-    const lastTag = await (0, retry_1.retryOctokit)(() => oktokit.rest.repos
+    const lastTag = await (0, retry_1.retryOctokit)(async () => oktokit.rest.repos
         .getLatestRelease({
         owner: repoOwner,
         repo: repoName
@@ -29079,7 +29079,7 @@ async function buildReleaseNotes(input) {
         .catch(() => null), 'Get latest release tag');
     let commits;
     if (!lastTag) {
-        commits = await (0, retry_1.retryOctokit)(() => oktokit.paginate(oktokit.rest.repos.listCommits, {
+        commits = await (0, retry_1.retryOctokit)(async () => oktokit.paginate(oktokit.rest.repos.listCommits, {
             owner: repoOwner,
             repo: repoName,
             per_page: 100
@@ -29088,7 +29088,7 @@ async function buildReleaseNotes(input) {
         }), 'List all commits');
     }
     else {
-        commits = await (0, retry_1.retryOctokit)(() => oktokit.rest.repos
+        commits = await (0, retry_1.retryOctokit)(async () => oktokit.rest.repos
             .compareCommits({
             owner: repoOwner,
             repo: repoName,
@@ -29102,7 +29102,7 @@ async function buildReleaseNotes(input) {
     }
     const commitFetchesPromises = commits.map(async (c) => {
         core.info(`Fetching: ${c}`);
-        return (0, retry_1.retryOctokit)(() => oktokit.rest.repos.listPullRequestsAssociatedWithCommit({
+        return (0, retry_1.retryOctokit)(async () => oktokit.rest.repos.listPullRequestsAssociatedWithCommit({
             owner: repoOwner,
             repo: repoName,
             commit_sha: c
@@ -29286,23 +29286,16 @@ var __importStar = (this && this.__importStar) || function (mod) {
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.retryOctokit = exports.retry = void 0;
 const core = __importStar(__nccwpck_require__(2186));
+const request_error_1 = __nccwpck_require__(537);
 const DEFAULT_OPTIONS = {
     maxRetries: 3,
     initialDelay: 1000,
     maxDelay: 30000,
     backoffMultiplier: 2,
     shouldRetry: (error) => {
-        if (!error || typeof error !== 'object') {
-            return false;
-        }
-        const err = error;
-        // Network errors
-        if (err.code && ['ECONNRESET', 'ETIMEDOUT', 'ENOTFOUND', 'ECONNREFUSED'].includes(err.code)) {
-            return true;
-        }
-        // HTTP status codes
-        if (err.status) {
-            const status = err.status;
+        // Check if it's a RequestError from Octokit
+        if (error instanceof request_error_1.RequestError) {
+            const status = error.status;
             // Retry on server errors (5xx)
             if (status >= 500 && status < 600) {
                 return true;
@@ -29316,17 +29309,25 @@ const DEFAULT_OPTIONS = {
                 return true;
             }
         }
-        // Octokit specific errors
-        if (err.response?.status) {
-            const status = err.response.status;
-            if (status >= 500 || status === 429 || status === 408) {
-                return true;
+        else if ('code' in error) {
+            // Check for Node.js network errors (not RequestError, which also has a numeric 'code')
+            const nodeError = error;
+            if (typeof nodeError.code === 'string') {
+                const retryableCodes = [
+                    'ECONNRESET',
+                    'ETIMEDOUT',
+                    'ENOTFOUND',
+                    'ECONNREFUSED'
+                ];
+                if (retryableCodes.includes(nodeError.code)) {
+                    return true;
+                }
             }
         }
         return false;
     }
 };
-function sleep(ms) {
+async function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 function addJitter(delay) {
@@ -29348,19 +29349,21 @@ async function retry(fn, options = {}, context) {
             return await fn();
         }
         catch (error) {
-            lastError = error;
+            // Ensure we have an Error object
+            const errorObj = error instanceof Error ? error : new Error(String(error));
+            lastError = errorObj;
             if (attempt === opts.maxRetries) {
                 core.error(`${context ? `[${context}] ` : ''}All ${opts.maxRetries} retry attempts failed`);
-                throw error;
+                throw errorObj;
             }
-            if (!opts.shouldRetry(error)) {
-                core.debug(`${context ? `[${context}] ` : ''}Error is not retryable: ${error instanceof Error ? error.message : String(error)}`);
-                throw error;
+            if (!opts.shouldRetry(errorObj)) {
+                core.debug(`${context ? `[${context}] ` : ''}Error is not retryable: ${errorObj.message}`);
+                throw errorObj;
             }
-            core.warning(`${context ? `[${context}] ` : ''}Request failed (attempt ${attempt + 1}/${opts.maxRetries + 1}): ${error instanceof Error ? error.message : String(error)}`);
+            core.warning(`${context ? `[${context}] ` : ''}Request failed (attempt ${attempt + 1}/${opts.maxRetries + 1}): ${errorObj.message}`);
         }
     }
-    throw lastError;
+    throw lastError || new Error('Retry failed with unknown error');
 }
 exports.retry = retry;
 async function retryOctokit(fn, context, options) {
