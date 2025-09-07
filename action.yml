@@ -1,6 +1,6 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
+name: 'Release Notes Generator'
+description: 'Generate release notes from merged pull requests'
+author: 'kylejs'
 
 # Add your action's branding here. This will appear on the GitHub Marketplace.
 branding:
@@ -12,11 +12,17 @@ inputs:
   github-token:
     description: 'github auth token'
     required: true
+  output-formats:
+    description: 'Output formats for release notes. Array of "markdown" and/or "plaintext"'
+    required: false
+    default: '["markdown"]'
 
 # Define your outputs here.
 outputs:
-  time:
-    description: 'Your output description here'
+  release-notes:
+    description: 'The generated release notes in markdown format'
+  release-notes-plaintext:
+    description: 'The generated release notes in plain text format'
 
 runs:
   using: node20

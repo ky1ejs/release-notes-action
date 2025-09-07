@@ -29053,8 +29053,9 @@ exports.buildReleaseNotes = void 0;
 const core = __importStar(__nccwpck_require__(2186));
 const rest_1 = __nccwpck_require__(5375);
 const retry_1 = __nccwpck_require__(8963);
+const changelogFormatter_1 = __nccwpck_require__(9871);
 async function buildReleaseNotes(input) {
-    const { githubToken, repoOwner, repoName } = input;
+    const { githubToken, repoOwner, repoName, outputFormats = ['markdown'] } = input;
     const oktokit = new rest_1.Octokit({
         auth: githubToken
     });
@@ -29128,18 +29129,19 @@ async function buildReleaseNotes(input) {
             }
         });
     });
-    let changelog = '# Changes\n\nHere are the latest changes in the reverse chronological order:\n\n';
-    Array.from(mergedPullRequests.values())
-        .sort((a, b) => b.number - a.number)
-        .forEach(pr => {
-        let newItem = `* ([#${pr.number}](${pr.url})) ${pr.title}`;
-        if (pr.author) {
-            newItem += ` by [@${pr.author.username}](${pr.author.url})`;
-        }
-        changelog += newItem + '\n';
-        core.setOutput('release-notes', changelog);
-        core.info(changelog);
-    });
+    const pullRequests = Array.from(mergedPullRequests.values());
+    if (outputFormats.includes('markdown')) {
+        const markdownChangelog = (0, changelogFormatter_1.generateMarkdownChangelog)(pullRequests);
+        core.setOutput('release-notes', markdownChangelog);
+        core.info('Markdown changelog generated');
+        core.info(markdownChangelog);
+    }
+    if (outputFormats.includes('plaintext')) {
+        const plaintextChangelog = (0, changelogFormatter_1.generatePlaintextChangelog)(pullRequests);
+        core.setOutput('release-notes-plaintext', plaintextChangelog);
+        core.info('Plain text changelog generated');
+        core.info(plaintextChangelog);
+    }
 }
 exports.buildReleaseNotes = buildReleaseNotes;
 
@@ -29184,13 +29186,71 @@ const ReleaseNotesBuilder_1 = __nccwpck_require__(3758);
  * @returns {Promise<void>} Resolves when the action is complete.
  */
 async function run() {
+    const outputFormatsInput = core.getInput('output-formats') || '["markdown"]';
+    let outputFormats;
+    try {
+        outputFormats = JSON.parse(outputFormatsInput);
+        if (!Array.isArray(outputFormats)) {
+            throw new Error('output-formats must be an array');
+        }
+        const validFormats = ['markdown', 'plaintext'];
+        for (const format of outputFormats) {
+            if (!validFormats.includes(format)) {
+                throw new Error(`Invalid output format: ${format}. Must be one of: ${validFormats.join(', ')}`);
+            }
+        }
+    }
+    catch (error) {
+        core.warning(`Failed to parse output-formats: ${error}. Using default ["markdown"]`);
+        outputFormats = ['markdown'];
+    }
     await (0, ReleaseNotesBuilder_1.buildReleaseNotes)({
         githubToken: core.getInput('github-token'),
         repoOwner: github.context.repo.owner,
-        repoName: github.context.repo.repo
+        repoName: github.context.repo.repo,
+        outputFormats
     });
 }
 exports.run = run;
+
+
+/***/ }),
+
+/***/ 9871:
+/***/ ((__unused_webpack_module, exports) => {
+
+"use strict";
+
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.generatePlaintextChangelog = exports.generateMarkdownChangelog = void 0;
+function generateMarkdownChangelog(pullRequests) {
+    let changelog = '# Changes\n\nHere are the latest changes in the reverse chronological order:\n\n';
+    pullRequests
+        .sort((a, b) => b.number - a.number)
+        .forEach(pr => {
+        let newItem = `* ([#${pr.number}](${pr.url})) ${pr.title}`;
+        if (pr.author) {
+            newItem += ` by [@${pr.author.username}](${pr.author.url})`;
+        }
+        changelog += newItem + '\n';
+    });
+    return changelog;
+}
+exports.generateMarkdownChangelog = generateMarkdownChangelog;
+function generatePlaintextChangelog(pullRequests) {
+    let changelog = 'Changes\n=======\nHere are the latest changes in the reverse chronological order:\n\n';
+    pullRequests
+        .sort((a, b) => b.number - a.number)
+        .forEach(pr => {
+        let newItem = `* (#${pr.number}) ${pr.title}`;
+        if (pr.author) {
+            newItem += ` by @${pr.author.username}`;
+        }
+        changelog += newItem + '\n';
+    });
+    return changelog;
+}
+exports.generatePlaintextChangelog = generatePlaintextChangelog;
 
 
 /***/ }),

@@ -1,15 +1,25 @@
 import * as core from '@actions/core'
 import { Octokit } from '@octokit/rest'
 import { retryOctokit } from './utils/retry'
+import {
+  generateMarkdownChangelog,
+  generatePlaintextChangelog
+} from './utils/changelogFormatter'
 
 type BuilderInput = {
   githubToken: string
   repoOwner: string
   repoName: string
+  outputFormats?: string[]
 }
 
 export async function buildReleaseNotes(input: BuilderInput): Promise<void> {
-  const { githubToken, repoOwner, repoName } = input
+  const {
+    githubToken,
+    repoOwner,
+    repoName,
+    outputFormats = ['markdown']
+  } = input
 
   const oktokit = new Octokit({
     auth: githubToken
@@ -109,19 +119,21 @@ export async function buildReleaseNotes(input: BuilderInput): Promise<void> {
       }
     })
   })
-  let changelog =
-    '# Changes\n\nHere are the latest changes in the reverse chronological order:\n\n'
-  Array.from(mergedPullRequests.values())
-    .sort((a, b) => b.number - a.number)
-    .forEach(pr => {
-      let newItem = `* ([#${pr.number}](${pr.url})) ${pr.title}`
-      if (pr.author) {
-        newItem += ` by [@${pr.author.username}](${pr.author.url})`
-      }
-      changelog += newItem + '\n'
-      core.setOutput('release-notes', changelog)
-      core.info(changelog)
-    })
+  const pullRequests = Array.from(mergedPullRequests.values())
+
+  if (outputFormats.includes('markdown')) {
+    const markdownChangelog = generateMarkdownChangelog(pullRequests)
+    core.setOutput('release-notes', markdownChangelog)
+    core.info('Markdown changelog generated')
+    core.info(markdownChangelog)
+  }
+
+  if (outputFormats.includes('plaintext')) {
+    const plaintextChangelog = generatePlaintextChangelog(pullRequests)
+    core.setOutput('release-notes-plaintext', plaintextChangelog)
+    core.info('Plain text changelog generated')
+    core.info(plaintextChangelog)
+  }
 }
 
 export interface PullRequestInfo {
