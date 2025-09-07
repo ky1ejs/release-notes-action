@@ -13,7 +13,7 @@ inputs:
     description: 'github auth token'
     required: true
   output-formats:
-    description: 'Output formats. Valid values are "markdown" and/or "plaintext"'
+    description: 'Output formats ("markdown" and/or "plaintext")'
     required: false
     default: '["markdown"]'
 
