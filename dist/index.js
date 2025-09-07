@@ -29052,12 +29052,13 @@ Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.buildReleaseNotes = void 0;
 const core = __importStar(__nccwpck_require__(2186));
 const rest_1 = __nccwpck_require__(5375);
+const retry_1 = __nccwpck_require__(8963);
 async function buildReleaseNotes(input) {
     const { githubToken, repoOwner, repoName } = input;
     const oktokit = new rest_1.Octokit({
         auth: githubToken
     });
-    const latestCommitHash = await oktokit.rest.repos
+    const latestCommitHash = await (0, retry_1.retryOctokit)(() => oktokit.rest.repos
         .getCommit({
         owner: repoOwner,
         repo: repoName,
@@ -29065,8 +29066,8 @@ async function buildReleaseNotes(input) {
     })
         .then(response => {
         return response.data.sha;
-    });
-    const lastTag = await oktokit.rest.repos
+    }), 'Get latest commit hash');
+    const lastTag = await (0, retry_1.retryOctokit)(() => oktokit.rest.repos
         .getLatestRelease({
         owner: repoOwner,
         repo: repoName
@@ -29074,19 +29075,19 @@ async function buildReleaseNotes(input) {
         .then(response => {
         return response.data.tag_name;
     })
-        .catch(() => null);
+        .catch(() => null), 'Get latest release tag');
     let commits;
     if (!lastTag) {
-        commits = await oktokit.paginate(oktokit.rest.repos.listCommits, {
+        commits = await (0, retry_1.retryOctokit)(() => oktokit.paginate(oktokit.rest.repos.listCommits, {
             owner: repoOwner,
             repo: repoName,
             per_page: 100
         }, response => {
             return response.data.map(c => c.sha);
-        });
+        }), 'List all commits');
     }
     else {
-        commits = await oktokit.rest.repos
+        commits = await (0, retry_1.retryOctokit)(() => oktokit.rest.repos
             .compareCommits({
             owner: repoOwner,
             repo: repoName,
@@ -29095,16 +29096,16 @@ async function buildReleaseNotes(input) {
         })
             .then(response => {
             return response.data.commits.map(c => c.sha);
-        });
+        }), 'Compare commits since last release');
         core.info(`Found ${commits.length} commits since last release`);
     }
     const commitFetchesPromises = commits.map(async (c) => {
         core.info(`Fetching: ${c}`);
-        return oktokit.rest.repos.listPullRequestsAssociatedWithCommit({
+        return (0, retry_1.retryOctokit)(() => oktokit.rest.repos.listPullRequestsAssociatedWithCommit({
             owner: repoOwner,
             repo: repoName,
             commit_sha: c
-        });
+        }), `Fetch PRs for commit ${c.substring(0, 7)}`);
     });
     const commitFetches = await Promise.all(commitFetchesPromises);
     const mergedPullRequests = new Map();
@@ -29190,6 +29191,122 @@ async function run() {
     });
 }
 exports.run = run;
+
+
+/***/ }),
+
+/***/ 8963:
+/***/ (function(__unused_webpack_module, exports, __nccwpck_require__) {
+
+"use strict";
+
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || function (mod) {
+    if (mod && mod.__esModule) return mod;
+    var result = {};
+    if (mod != null) for (var k in mod) if (k !== "default" && Object.prototype.hasOwnProperty.call(mod, k)) __createBinding(result, mod, k);
+    __setModuleDefault(result, mod);
+    return result;
+};
+Object.defineProperty(exports, "__esModule", ({ value: true }));
+exports.retryOctokit = exports.retry = void 0;
+const core = __importStar(__nccwpck_require__(2186));
+const DEFAULT_OPTIONS = {
+    maxRetries: 3,
+    initialDelay: 1000,
+    maxDelay: 30000,
+    backoffMultiplier: 2,
+    shouldRetry: (error) => {
+        if (!error || typeof error !== 'object') {
+            return false;
+        }
+        const err = error;
+        // Network errors
+        if (err.code && ['ECONNRESET', 'ETIMEDOUT', 'ENOTFOUND', 'ECONNREFUSED'].includes(err.code)) {
+            return true;
+        }
+        // HTTP status codes
+        if (err.status) {
+            const status = err.status;
+            // Retry on server errors (5xx)
+            if (status >= 500 && status < 600) {
+                return true;
+            }
+            // Retry on rate limit
+            if (status === 429) {
+                return true;
+            }
+            // Retry on request timeout
+            if (status === 408) {
+                return true;
+            }
+        }
+        // Octokit specific errors
+        if (err.response?.status) {
+            const status = err.response.status;
+            if (status >= 500 || status === 429 || status === 408) {
+                return true;
+            }
+        }
+        return false;
+    }
+};
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+function addJitter(delay) {
+    // Add up to 25% jitter
+    return delay + Math.random() * delay * 0.25;
+}
+async function retry(fn, options = {}, context) {
+    const opts = { ...DEFAULT_OPTIONS, ...options };
+    let lastError;
+    let delay = opts.initialDelay;
+    for (let attempt = 0; attempt <= opts.maxRetries; attempt++) {
+        try {
+            if (attempt > 0) {
+                const jitteredDelay = addJitter(Math.min(delay, opts.maxDelay));
+                core.info(`${context ? `[${context}] ` : ''}Retry attempt ${attempt}/${opts.maxRetries} after ${Math.round(jitteredDelay)}ms delay`);
+                await sleep(jitteredDelay);
+                delay *= opts.backoffMultiplier;
+            }
+            return await fn();
+        }
+        catch (error) {
+            lastError = error;
+            if (attempt === opts.maxRetries) {
+                core.error(`${context ? `[${context}] ` : ''}All ${opts.maxRetries} retry attempts failed`);
+                throw error;
+            }
+            if (!opts.shouldRetry(error)) {
+                core.debug(`${context ? `[${context}] ` : ''}Error is not retryable: ${error instanceof Error ? error.message : String(error)}`);
+                throw error;
+            }
+            core.warning(`${context ? `[${context}] ` : ''}Request failed (attempt ${attempt + 1}/${opts.maxRetries + 1}): ${error instanceof Error ? error.message : String(error)}`);
+        }
+    }
+    throw lastError;
+}
+exports.retry = retry;
+async function retryOctokit(fn, context, options) {
+    return retry(fn, options, context);
+}
+exports.retryOctokit = retryOctokit;
 
 
 /***/ }),

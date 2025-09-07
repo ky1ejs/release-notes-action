@@ -1,5 +1,6 @@
 import * as core from '@actions/core'
 import { Octokit } from '@octokit/rest'
+import { retryOctokit } from './utils/retry'
 
 type BuilderInput = {
   githubToken: string
@@ -13,59 +14,79 @@ export async function buildReleaseNotes(input: BuilderInput): Promise<void> {
   const oktokit = new Octokit({
     auth: githubToken
   })
-  const latestCommitHash = await oktokit.rest.repos
-    .getCommit({
-      owner: repoOwner,
-      repo: repoName,
-      ref: 'heads/main'
-    })
-    .then(response => {
-      return response.data.sha
-    })
-  const lastTag = await oktokit.rest.repos
-    .getLatestRelease({
-      owner: repoOwner,
-      repo: repoName
-    })
-    .then(response => {
-      return response.data.tag_name
-    })
-    .catch(() => null)
+  const latestCommitHash = await retryOctokit(
+    () =>
+      oktokit.rest.repos
+        .getCommit({
+          owner: repoOwner,
+          repo: repoName,
+          ref: 'heads/main'
+        })
+        .then(response => {
+          return response.data.sha
+        }),
+    'Get latest commit hash'
+  )
+  const lastTag = await retryOctokit(
+    () =>
+      oktokit.rest.repos
+        .getLatestRelease({
+          owner: repoOwner,
+          repo: repoName
+        })
+        .then(response => {
+          return response.data.tag_name
+        })
+        .catch(() => null),
+    'Get latest release tag'
+  )
 
   let commits: string[]
   if (!lastTag) {
-    commits = await oktokit.paginate(
-      oktokit.rest.repos.listCommits,
-      {
-        owner: repoOwner,
-        repo: repoName,
-        per_page: 100
-      },
-      response => {
-        return response.data.map(c => c.sha)
-      }
+    commits = await retryOctokit(
+      () =>
+        oktokit.paginate(
+          oktokit.rest.repos.listCommits,
+          {
+            owner: repoOwner,
+            repo: repoName,
+            per_page: 100
+          },
+          response => {
+            return response.data.map(c => c.sha)
+          }
+        ),
+      'List all commits'
     )
   } else {
-    commits = await oktokit.rest.repos
-      .compareCommits({
-        owner: repoOwner,
-        repo: repoName,
-        base: lastTag,
-        head: latestCommitHash
-      })
-      .then(response => {
-        return response.data.commits.map(c => c.sha)
-      })
+    commits = await retryOctokit(
+      () =>
+        oktokit.rest.repos
+          .compareCommits({
+            owner: repoOwner,
+            repo: repoName,
+            base: lastTag,
+            head: latestCommitHash
+          })
+          .then(response => {
+            return response.data.commits.map(c => c.sha)
+          }),
+      'Compare commits since last release'
+    )
     core.info(`Found ${commits.length} commits since last release`)
   }
 
   const commitFetchesPromises = commits.map(async c => {
     core.info(`Fetching: ${c}`)
-    return oktokit.rest.repos.listPullRequestsAssociatedWithCommit({
-      owner: repoOwner,
-      repo: repoName,
-      commit_sha: c
-    })
+    return retryOctokit(
+      () =>
+        oktokit.rest.repos.listPullRequestsAssociatedWithCommit({
+          owner: repoOwner,
+          repo: repoName,
+          commit_sha: c
+        }),
+      `Fetch PRs for commit ${c.substring(0, 7)}`
+    )
   })
   const commitFetches = await Promise.all(commitFetchesPromises)
   const mergedPullRequests = new Map<number, PullRequestInfo>()
