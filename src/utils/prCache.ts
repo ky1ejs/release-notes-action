@@ -4,7 +4,7 @@ import * as fs from 'fs'
 import * as path from 'path'
 import type { PullRequestInfo } from '../ReleaseNotesBuilder'
 
-const CACHE_VERSION = 'v1'
+const CACHE_VERSION = 'v2'
 const CACHE_DIR = '.release-notes-cache'
 
 export interface PRCacheData {

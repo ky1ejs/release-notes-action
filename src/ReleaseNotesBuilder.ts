@@ -138,7 +138,8 @@ export async function buildReleaseNotes(input: BuilderInput): Promise<void> {
           number: pr.number,
           title: pr.title,
           url: pr.html_url,
-          author
+          author,
+          mergedAt: pr.merged_at
         }
         prsForCommit.push(prInfo)
         mergedPullRequests.set(pr.number, prInfo)
@@ -187,6 +188,7 @@ export interface PullRequestInfo {
   title: string
   url: string
   author?: GitHubUser
+  mergedAt: string
 }
 
 export interface GitHubUser {

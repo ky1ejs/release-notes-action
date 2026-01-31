@@ -7,7 +7,9 @@ export function generateMarkdownChangelog(
     '# Changes\n\nHere are the latest changes in the reverse chronological order:\n\n'
 
   pullRequests
-    .sort((a, b) => b.number - a.number)
+    .sort(
+      (a, b) => new Date(b.mergedAt).getTime() - new Date(a.mergedAt).getTime()
+    )
     .forEach(pr => {
       let newItem = `* ([#${pr.number}](${pr.url})) ${pr.title}`
       if (pr.author) {
@@ -26,7 +28,9 @@ export function generatePlaintextChangelog(
     'Changes\n=======\nHere are the latest changes in the reverse chronological order:\n\n'
 
   pullRequests
-    .sort((a, b) => b.number - a.number)
+    .sort(
+      (a, b) => new Date(b.mergedAt).getTime() - new Date(a.mergedAt).getTime()
+    )
     .forEach(pr => {
       let newItem = `* (#${pr.number}) ${pr.title}`
       if (pr.author) {
