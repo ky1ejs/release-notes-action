@@ -31,11 +31,35 @@ export async function run(): Promise<void> {
     outputFormats = ['markdown']
   }
 
+  // Parse concurrency limit
+  const concurrencyInput = core.getInput('concurrency-limit') || '10'
+  let concurrencyLimit = 10
+  try {
+    concurrencyLimit = parseInt(concurrencyInput, 10)
+    if (isNaN(concurrencyLimit) || concurrencyLimit < 1) {
+      core.warning(
+        `Invalid concurrency-limit: ${concurrencyInput}. Using default 10`
+      )
+      concurrencyLimit = 10
+    }
+  } catch {
+    core.warning(
+      `Failed to parse concurrency-limit: ${concurrencyInput}. Using default 10`
+    )
+    concurrencyLimit = 10
+  }
+
+  // Parse enable-cache
+  const enableCacheInput = core.getInput('enable-cache') || 'true'
+  const enableCache = enableCacheInput.toLowerCase() !== 'false'
+
   await buildReleaseNotes({
     githubToken: core.getInput('github-token'),
     repoOwner: github.context.repo.owner,
     repoName: github.context.repo.repo,
-    outputFormats
+    outputFormats,
+    concurrencyLimit,
+    enableCache
   })
 }
 

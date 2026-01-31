@@ -15,8 +15,31 @@ const octokit = {
 
 jest.mock('@octokit/rest', () => {
   return {
-    Octokit: jest.fn(() => octokit)
+    Octokit: {
+      plugin: jest.fn(() => jest.fn(() => octokit))
+    }
   }
+})
+
+jest.mock('@octokit/plugin-throttling', () => {
+  return {
+    throttling: jest.fn()
+  }
+})
+
+jest.mock('@actions/cache', () => {
+  return {
+    restoreCache: jest.fn().mockResolvedValue(null),
+    saveCache: jest.fn().mockResolvedValue(undefined)
+  }
+})
+
+jest.mock('p-limit', () => {
+  return jest.fn(
+    () =>
+      async <T>(fn: () => Promise<T>): Promise<T> =>
+        fn()
+  )
 })
 
 // mock the GitHub context

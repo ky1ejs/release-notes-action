@@ -16,6 +16,14 @@ inputs:
     description: 'Output formats ("markdown" and/or "plaintext")'
     required: false
     default: '["markdown"]'
+  concurrency-limit:
+    description: 'Maximum number of concurrent API requests'
+    required: false
+    default: '10'
+  enable-cache:
+    description: 'Enable caching of commit-to-PR mappings'
+    required: false
+    default: 'true'
 
 # Define your outputs here.
 outputs:
